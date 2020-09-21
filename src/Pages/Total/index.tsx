@@ -17,7 +17,7 @@ export default function Total() {
       <div className={`expenses-page-total ${anim ? 'total-to-top' : ''}`}>
         <p>Total</p>
         <div>
-          <span>R$1346,00</span>
+          <span>R$9.430,12</span>
           <ArrowDownIcon
             className={anim ? 'total-rotate-arrow' : ''}
             onClick={initAnimation}
