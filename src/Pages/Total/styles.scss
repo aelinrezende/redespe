@@ -1,21 +1,16 @@
-.expenses-page {
+.total-page {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
-    height: 100%;
     width: 100%;
+    padding: 1.6rem;
+    animation: total-opacity 2s;
+    animation-fill-mode: forwards;
 }
 
-.expenses-page h1 {
-    font-weight: 700;
-    font-size: 3.2rem;
-    position: absolute;
-    top: 20%;
-}
-
-.expenses-page-total {
+.total-page-amount {
     display: flex;
     flex-direction: column;
     font-size: 2.8rem;
@@ -23,73 +18,37 @@
     justify-content: space-between;
 }
 
-.expenses-page-total p {
+.total-page-amount p {
     align-self: flex-start;
     color: #858586;
 }
 
-.expenses-page-total svg {
+.total-page-amount svg {
     width: 2.4rem;
     margin-left: 6rem;
     stroke: #000;
     stroke-width: 2;
 }
 
-.expenses-page-total svg.total-rotate-arrow {
+.total-page-amount svg.total-rotate-arrow {
     transform: rotate(180deg);
     transition: transform .3s;
 }
 
-.total-to-start {
-    animation: total-to-start .5s;
-    animation-fill-mode: forwards;
-    background-color: #ecebe6;
-    transition: background-color .5s;
-}
-
-.total-to-top {
-    animation: total-opacity .8s;
-    animation-fill-mode: forwards;
-}
-
-.title-anim-off {
-    opacity: 0;
-    transition: opacity .5s;
-    animation: top-off 1.5s;
-    animation-fill-mode: forwards;
-}
-
-@keyframes top-off {
-  to {
-    top: -10%;
-    display: none;
-  }
-}
-
 @keyframes total-opacity {
   0% {
-    opacity: .8;
+    opacity: 0;
   }
   3% {
-    opacity: .6;
+    opacity: .2;
   }
   5% {
-    opacity: .3;
+    opacity: .5;
   }
   10%, 25%, 75% {
-    opacity: 0;
+    opacity: 8;
   }
   100% {
     opacity: 1;
-    padding: 1.6rem;
-  }
-}
-
-@keyframes total-to-start {
-  0%, 3%, 5%, 25%, 75% {
-    justify-content: center;
-  }
-  100% {
-    justify-content: start;
   }
 }

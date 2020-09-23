@@ -1,0 +1,40 @@
+.amount-container {
+    font-size: 2.8rem;
+    align-items: center;
+    padding: 1.6rem;
+}
+
+.amount-container p {
+    align-self: flex-start;
+    color: #858586;
+}
+
+.amount-container svg {
+    width: 2.4rem;
+    margin-left: 6rem;
+    stroke: #000;
+    stroke-width: 2;
+}
+
+.amount-container svg.total-rotate-arrow {
+    transform: rotate(180deg);
+    transition: transform .3s;
+}
+
+@keyframes total-opacity {
+  0% {
+    opacity: 0;
+  }
+  3% {
+    opacity: .2;
+  }
+  5% {
+    opacity: .5;
+  }
+  10%, 25%, 75% {
+    opacity: 8;
+  }
+  100% {
+    opacity: 1;
+  }
+}
