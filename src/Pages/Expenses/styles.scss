@@ -3,7 +3,9 @@ main {
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: center
+  align-items: center;
+  animation: bg 1s;
+  animation-fill-mode: forwards;
 }
 
 .expenses-list {
@@ -31,11 +33,29 @@ main {
   margin-top: 1.6rem;
 }
 
+.expense-item .expense-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.expense-provider p {
+  color: #8e8c8c;
+}
+
 @keyframes expenses-up {
   0% {
     top: 100px;
   }
   100% {
     top: 0;
+  }
+}
+
+@keyframes bg {
+  from {
+    background: inherit;
+  }
+  to {
+    background: #eaeaea;
   }
 }

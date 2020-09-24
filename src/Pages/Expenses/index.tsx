@@ -15,32 +15,32 @@ export default function Expenses() {
     {
       provider: 'Enel',
       label: 'Luz',
-      value: 3287,
+      value: 3287.99,
     },
     {
       provider: 'Sabesp',
       label: 'Àgua',
-      value: 560,
+      value: 560.68,
     },
     {
       provider: 'Outros',
-      label: 'Outros',
-      value: 5581,
+      label: 'Diversos',
+      value: 5581.45,
     },
   ]);
 
   return (
     <main>
-      <Amount />
+      <Amount route="/redespe" />
       <ul className="expenses-list">
-        {expenses.map(expense => {
+        {expenses.map((expense, index) => {
           return (
-            <li className="expense-item">
+            <li key={'despesa-' + index} className="expense-item">
               <div className="expense-provider">
                 <h2>{expense.provider}</h2>
                 <p>{expense.label}</p>
               </div>
-              <p className="expense-value">R${expense.value},00</p>
+              <p className="expense-value">R${(Math.round(expense.value * 100) / 100).toLocaleString()}</p>
             </li>
           )
         })}

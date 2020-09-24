@@ -8,7 +8,7 @@ export default function Total() {
 
   return (
     <div className="total-page">
-      <Amount />
+      <Amount route="/redespe/expenses"/>
     </div>
   )
 }
