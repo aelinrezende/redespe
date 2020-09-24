@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/redespe/static/css/main.bdeba0a7.chunk.css",
-    "main.js": "/redespe/static/js/main.8285d9da.chunk.js",
-    "main.js.map": "/redespe/static/js/main.8285d9da.chunk.js.map",
+    "main.css": "/redespe/static/css/main.37506cd2.chunk.css",
+    "main.js": "/redespe/static/js/main.fcf67147.chunk.js",
+    "main.js.map": "/redespe/static/js/main.fcf67147.chunk.js.map",
     "runtime-main.js": "/redespe/static/js/runtime-main.2e392b61.js",
     "runtime-main.js.map": "/redespe/static/js/runtime-main.2e392b61.js.map",
     "static/js/2.566a3541.chunk.js": "/redespe/static/js/2.566a3541.chunk.js",
     "static/js/2.566a3541.chunk.js.map": "/redespe/static/js/2.566a3541.chunk.js.map",
     "index.html": "/redespe/index.html",
-    "precache-manifest.8d199548ff023e8f5eb4633215de51b3.js": "/redespe/precache-manifest.8d199548ff023e8f5eb4633215de51b3.js",
+    "precache-manifest.0a6edf946372c7152ead6af34c066028.js": "/redespe/precache-manifest.0a6edf946372c7152ead6af34c066028.js",
     "service-worker.js": "/redespe/service-worker.js",
-    "static/css/main.bdeba0a7.chunk.css.map": "/redespe/static/css/main.bdeba0a7.chunk.css.map",
+    "static/css/main.37506cd2.chunk.css.map": "/redespe/static/css/main.37506cd2.chunk.css.map",
     "static/js/2.566a3541.chunk.js.LICENSE.txt": "/redespe/static/js/2.566a3541.chunk.js.LICENSE.txt",
     "static/media/arrow.9c1424d6.svg": "/redespe/static/media/arrow.9c1424d6.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2e392b61.js",
     "static/js/2.566a3541.chunk.js",
-    "static/css/main.bdeba0a7.chunk.css",
-    "static/js/main.8285d9da.chunk.js"
+    "static/css/main.37506cd2.chunk.css",
+    "static/js/main.fcf67147.chunk.js"
   ]
 }
