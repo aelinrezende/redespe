@@ -1,23 +1,28 @@
 {
   "files": {
-    "main.css": "/redespe/static/css/main.37506cd2.chunk.css",
-    "main.js": "/redespe/static/js/main.fcf67147.chunk.js",
-    "main.js.map": "/redespe/static/js/main.fcf67147.chunk.js.map",
+    "main.css": "/redespe/static/css/main.801c6888.chunk.css",
+    "main.js": "/redespe/static/js/main.b662a392.chunk.js",
+    "main.js.map": "/redespe/static/js/main.b662a392.chunk.js.map",
     "runtime-main.js": "/redespe/static/js/runtime-main.2e392b61.js",
     "runtime-main.js.map": "/redespe/static/js/runtime-main.2e392b61.js.map",
-    "static/js/2.566a3541.chunk.js": "/redespe/static/js/2.566a3541.chunk.js",
-    "static/js/2.566a3541.chunk.js.map": "/redespe/static/js/2.566a3541.chunk.js.map",
+    "static/js/2.936bcda4.chunk.js": "/redespe/static/js/2.936bcda4.chunk.js",
+    "static/js/2.936bcda4.chunk.js.map": "/redespe/static/js/2.936bcda4.chunk.js.map",
     "index.html": "/redespe/index.html",
-    "precache-manifest.0a6edf946372c7152ead6af34c066028.js": "/redespe/precache-manifest.0a6edf946372c7152ead6af34c066028.js",
+    "precache-manifest.a1bf958298fbdf0b965c6ad40015b411.js": "/redespe/precache-manifest.a1bf958298fbdf0b965c6ad40015b411.js",
     "service-worker.js": "/redespe/service-worker.js",
-    "static/css/main.37506cd2.chunk.css.map": "/redespe/static/css/main.37506cd2.chunk.css.map",
-    "static/js/2.566a3541.chunk.js.LICENSE.txt": "/redespe/static/js/2.566a3541.chunk.js.LICENSE.txt",
-    "static/media/arrow.9c1424d6.svg": "/redespe/static/media/arrow.9c1424d6.svg"
+    "static/css/main.801c6888.chunk.css.map": "/redespe/static/css/main.801c6888.chunk.css.map",
+    "static/js/2.936bcda4.chunk.js.LICENSE.txt": "/redespe/static/js/2.936bcda4.chunk.js.LICENSE.txt",
+    "static/media/arrow.svg": "/redespe/static/media/arrow.9c1424d6.svg",
+    "static/media/arrow_down.svg": "/redespe/static/media/arrow_down.2c37dfad.svg",
+    "static/media/coins.svg": "/redespe/static/media/coins.205a2d55.svg",
+    "static/media/enel_logo.svg": "/redespe/static/media/enel_logo.4c30b3a2.svg",
+    "static/media/sabesp_logo.svg": "/redespe/static/media/sabesp_logo.8fdb491b.svg",
+    "static/media/vivo_logo.svg": "/redespe/static/media/vivo_logo.a1b563b2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2e392b61.js",
-    "static/js/2.566a3541.chunk.js",
-    "static/css/main.37506cd2.chunk.css",
-    "static/js/main.fcf67147.chunk.js"
+    "static/js/2.936bcda4.chunk.js",
+    "static/css/main.801c6888.chunk.css",
+    "static/js/main.b662a392.chunk.js"
   ]
 }
