@@ -51,9 +51,20 @@ textarea {
     color: var(--color-text-base);
 }
 
+ul {
+  list-style: none;
+  padding: 0;
+}
+
 .container {
     width: 90vw;
     max-width: 700px;
+}
+
+.btn {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
 }
 
 @media (min-width: 700px) {

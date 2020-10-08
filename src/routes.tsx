@@ -1,8 +1,8 @@
 import React from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 
-import Total from './Pages/Total/';
-import Expenses from './Pages/Expenses/';
+import Total from './pages/Total/';
+import Expenses from './pages/Expenses/';
 
 function Routes() {
   return (
