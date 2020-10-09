@@ -8,6 +8,7 @@ import Amount from '../../components/Amount/';
 import data from '../../data.json';
 
 import { ReactComponent as Arrow } from '../../assets/icons/arrow_down.svg';
+import { ReactComponent as Coins } from '../../assets/icons/coins.svg';
 
 interface ExpensesInt {
   provider: string;
@@ -20,15 +21,11 @@ interface ExpensesInt {
     value: number;
   }>
 }
-interface ImportProps {
-  default: string;
-  esModule: boolean;
-}
 
 export default function Expenses() {
   const [billsVisibility, setBillsVisibility] = useState<Array<string>>([]);
 
-  function toggleSetBillsVisibility(id: string, a:string) {
+  function toggleSetBillsVisibility(id: string) {
     if (billsVisibility.includes(id)) {
       setBillsVisibility(billsVisibility.filter(sid => sid !== id))
     }
@@ -37,6 +34,13 @@ export default function Expenses() {
       newOpen.push(id)
       setBillsVisibility(newOpen)
     }
+  }
+
+  function formatDate(date: string) {
+    const months = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
+    const newDate = new Date(date);
+
+    return `${months[newDate.getMonth()]}, ${newDate.getFullYear()}`;
   }
 
   return (
@@ -62,7 +66,7 @@ export default function Expenses() {
                 <button className="btn edit-btn" type="button">Editar</button>
               </div>
 
-              <span className="more-details" onClick={() => toggleSetBillsVisibility(expense.provider, expense.logo)}>
+              <span className="more-details" onClick={() => toggleSetBillsVisibility(expense.provider)}>
                 <p>Ver mais detalhes</p>
                 <Arrow />
               </span>
@@ -75,7 +79,11 @@ export default function Expenses() {
                   {expense.bills.map(bill => {
                     return (
                     <li className="bill">
-                      R${bill.value}
+                      <div className="bill-details">
+                        <span className="bill-date">{formatDate(bill.reference)}</span>
+                        <span className="bill-value">R${(Math.round(bill.value * 100) / 100).toLocaleString()}</span>
+                      </div>
+                      <button className="btn"><Coins /></button>
                     </li>
                     )
                   })}

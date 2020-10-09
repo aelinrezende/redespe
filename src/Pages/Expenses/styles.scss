@@ -23,9 +23,8 @@ main {
 .expense-item {
   display: flex;
   background: #fff;
-  padding: 1.6rem 2rem;
   border-radius: 1.6rem;
-    box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px 10px -5px rgba(0, 0, 0, 0.5);
   flex-direction: column;
 }
 
@@ -35,6 +34,7 @@ main {
 
 .expense-item .expense-details {
   display: flex;
+  padding: 1.6rem 2rem 0;
   justify-content: space-between;
   align-items: center;
 }
@@ -55,6 +55,11 @@ main {
 
 .expense-provider div p {
   color: #8e8c8c;
+}
+
+.expense-item .expense-buttons,
+.expense-item .more-details {
+  padding: 0 2rem;
 }
 
 .expense-item .expense-buttons {
@@ -105,7 +110,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 1.2rem;
+  margin: 1.2rem 0;
   font-style: italic;
   color: #b9b9b9;
   cursor: pointer;
@@ -122,7 +127,36 @@ main {
 }
 
 .expense-item .bills {
+  padding: 2.4rem;
+  background: #f7f6f6;
+}
 
+.expense-item .bills .bill {
+  display: flex;
+  justify-content: space-between;
+}
+
+.expense-item .bills .bill + .bill {
+  margin-top: 1.6rem;
+}
+
+.expense-item .bills .bill .bill-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.expense-item .bills .bill .bill-details .bill-date {
+  font-size: 1.4rem;
+  color: #8a8685;
+}
+
+.expense-item .bills .bill .bill-details .bill-value {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.expense-item .bills .bill button svg {
+  width: 2rem;
 }
 
 @keyframes expenses-up {
