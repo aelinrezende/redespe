@@ -43,6 +43,12 @@ export default function Expenses() {
     return `${months[newDate.getMonth()]}, ${newDate.getFullYear()}`;
   }
 
+  function getNewDate(a:string, b: string) {
+    const [dateA, dateB] = [Number(new Date(a)), Number(new Date(b))]
+    return dateA - dateB;
+  }
+
+
   return (
     <main>
       <Amount route="/redespe" />
@@ -76,7 +82,7 @@ export default function Expenses() {
                 height={ billsVisibility.includes(expense.provider) ? "auto" : 0 }
               >
                 <ul className={`bills ${billsVisibility ? "show" : ""}`}>
-                  {expense.bills.map(bill => {
+                  {expense.bills.sort((a,b) => getNewDate(a.reference, b.reference)).reverse().map(bill => {
                     return (
                     <li className="bill">
                       <div className="bill-details">
