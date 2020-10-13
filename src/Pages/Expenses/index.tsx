@@ -82,7 +82,7 @@ export default function Expenses() {
                 height={ billsVisibility.includes(expense.provider) ? "auto" : 0 }
               >
                 <ul className={`bills ${billsVisibility ? "show" : ""}`}>
-                  {expense.bills.sort((a,b) => getNewDate(a.reference, b.reference)).reverse().map(bill => {
+                  {expense.bills.sort((a,b) => getNewDate(a.reference, b.reference)).map(bill => {
                     return (
                     <li className="bill">
                       <div className="bill-details">
