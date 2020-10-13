@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "fb42ac7fbf6bd720482b9e8b2b11a053",
+    "revision": "9e4a33786eefa965aea3d969251b9504",
     "url": "/redespe/index.html"
   },
   {
-    "revision": "ac9fe6024fb22f47218f",
+    "revision": "6347507f88788cc327e0",
     "url": "/redespe/static/css/main.cf9e7bb8.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/redespe/static/js/2.936bcda4.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "ac9fe6024fb22f47218f",
-    "url": "/redespe/static/js/main.84116a73.chunk.js"
+    "revision": "6347507f88788cc327e0",
+    "url": "/redespe/static/js/main.83fed04e.chunk.js"
   },
   {
     "revision": "c56edf29f529635fd05f",
