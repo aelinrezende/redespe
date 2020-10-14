@@ -15,11 +15,12 @@ interface ExpensesInt {
   label: string;
   value: number;
   logo: string;
-  bills: Array<{
-    expire: string;
-    reference: string;
-    value: number;
-  }>
+  bills: Array<BillsInt>
+}
+interface BillsInt {
+  expire: string;
+  reference: string;
+  value: number;
 }
 
 export default function Expenses() {
@@ -44,10 +45,17 @@ export default function Expenses() {
   }
 
   function getNewDate(a:string, b: string) {
-    const [dateA, dateB] = [Number(new Date(a)), Number(new Date(b))]
-    return dateA - dateB;
+    return new Date(a).valueOf() - new Date(b).valueOf();
   }
 
+  function getTotal(bills: Array<BillsInt>) {
+    let total = 0;
+    for (let i = 0; i < bills.length; i++) {
+      total += bills[i].value;
+    }
+
+    return total.toFixed(2);
+  }
 
   return (
     <main>
@@ -64,7 +72,7 @@ export default function Expenses() {
                     <p>{expense.label}</p>
                   </div>
                 </div>
-                <p className="expense-value">R${(Math.round(expense.value * 100) / 100).toLocaleString()}</p>
+                <p className="expense-value">R${getTotal(expense.bills)}</p>
               </div>
 
               <div className="expense-buttons">
@@ -82,12 +90,12 @@ export default function Expenses() {
                 height={ billsVisibility.includes(expense.provider) ? "auto" : 0 }
               >
                 <ul className={`bills ${billsVisibility ? "show" : ""}`}>
-                  {expense.bills.sort((a,b) => getNewDate(a.reference, b.reference)).map(bill => {
+                  {expense.bills.sort((a,b) => getNewDate(a.reference, b.reference)).reverse().map(bill => {
                     return (
                     <li className="bill">
                       <div className="bill-details">
                         <span className="bill-date">{formatDate(bill.reference)}</span>
-                        <span className="bill-value">R${(Math.round(bill.value * 100) / 100).toLocaleString()}</span>
+                        <span className="bill-value">R${bill.value.toFixed(2)}</span>
                       </div>
                       <button className="btn"><Coins /></button>
                     </li>
