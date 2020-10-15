@@ -1,14 +1,13 @@
 import React, { useState, useEffect, useContext } from 'react';
 import AnimateHeight from 'react-animate-height';
 
-import './styles.scss';
-
 import Amount from '../../components/Amount/';
+import ExpensesContext, { ExpensesInt, BillsInt } from '../../expensesContext';
 
 import { ReactComponent as Arrow } from '../../assets/icons/arrow_down.svg';
 import { ReactComponent as Coins } from '../../assets/icons/coins.svg';
 
-import ExpensesContext, { ExpensesInt, BillsInt } from '../../expensesContext';
+import './styles.scss';
 
 export default function Expenses() {
   const data = useContext(ExpensesContext)[0] as Array<ExpensesInt>;
@@ -17,7 +16,7 @@ export default function Expenses() {
   const [expensesTotal, setExpensesTotal] = useState(0);
   const [billsVisibility, setBillsVisibility] = useState<Array<string>>([]);
 
-  // temporaely way of getting the projects data...
+  // temporary way to set the expenses value...
   useEffect(() => { 
     let total = 0;
     for (let i = 0; i < data.length; i++) {
@@ -30,6 +29,7 @@ export default function Expenses() {
 
   }, [])
 
+  // temporary way to set the expenses total value...
   const setTotal = () => {
     let total = 0;
     for (let i = 0; i < data.length; i++) {
@@ -41,6 +41,7 @@ export default function Expenses() {
     setExpensesTotal(total);
   }
 
+  // tracking the "opened/active" expenses bills by id
   const toggleSetBillsVisibility = (id: string) => {
     if (billsVisibility.includes(id)) {
       setBillsVisibility(billsVisibility.filter(sid => sid !== id))
@@ -52,6 +53,7 @@ export default function Expenses() {
     }
   }
 
+  // formating date to pt-BR...
   const formatDate = (date: string) => {
     const months = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
     const newDate = new Date(date);
@@ -59,10 +61,12 @@ export default function Expenses() {
     return `${months[newDate.getMonth()]}, ${newDate.getFullYear()}`;
   }
 
-  const getNewDate = (a:string, b: string) => {
+  // sorting array by date
+  const sortByDate = (a:string, b: string) => {
     return new Date(a).valueOf() - new Date(b).valueOf();
   }
 
+  // getting the expense bills total
   const getBillsTotal = (bills: Array<BillsInt>) => {
     let total = 0;
     for (let i = 0; i < bills.length; i++) {
@@ -72,6 +76,7 @@ export default function Expenses() {
     return total.toFixed(2);
   }
 
+  // almost completed way of removing a specific bill from a certain expense
   const removeBill = (expense_index: number, bill_index: number) => {
     let updatedExpenses = data;
     updatedExpenses[expense_index].bills.splice(bill_index, 1);
@@ -80,6 +85,7 @@ export default function Expenses() {
     setTotal();
   }
 
+  // almost completed way of removing a specfic expense
   const removeExpense = (expense_index: number) => {
     let updatedExpenses = data;
     updatedExpenses.splice(expense_index, 1);
@@ -123,7 +129,7 @@ export default function Expenses() {
                     height={ billsVisibility.includes(expense.provider) ? "auto" : 0 }
                   >
                     <ul className={`bills ${billsVisibility ? "show" : ""}`}>
-                      {expense.bills.sort((a,b) => getNewDate(a.reference, b.reference)).reverse().map((bill, i: number) => {
+                      {expense.bills.sort((a,b) => sortByDate(a.reference, b.reference)).reverse().map((bill, i: number) => {
                         return (
                           <li className="bill" key={`bill-${i}`}>
                             <div className="bill-details">
