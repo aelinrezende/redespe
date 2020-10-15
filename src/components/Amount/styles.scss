@@ -4,23 +4,23 @@
   padding: 1.6rem;
   animation: total-opacity 2s;
   animation-fill-mode: forwards;
-}
 
-.amount-container p {
-  align-self: flex-start;
-  color: #858586;
-}
+  & p {
+    align-self: flex-start;
+    color: #858586;
+  }
 
-.amount-container svg {
-  width: 2.4rem;
-  margin-left: 6rem;
-  stroke: #000;
-  stroke-width: 2;
-}
+  & svg {
+    width: 2.4rem;
+    margin-left: 6rem;
+    stroke: #000;
+    stroke-width: 2;
+  }
 
-.amount-container svg.total-rotate-arrow {
-  transform: rotate(180deg);
-  transition: transform .3s;
+  & svg.total-rotate-arrow {
+    animation: icon-flip .5s;
+    animation-fill-mode: forwards
+  }
 }
 
 @keyframes total-opacity {
@@ -38,5 +38,14 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes icon-flip {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
   }
 }

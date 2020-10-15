@@ -6,31 +6,11 @@
   position: relative;
   width: 100%;
   padding: 1.6rem;
-}
 
-.total-page-amount {
-  display: flex;
-  flex-direction: column;
-  font-size: 2.8rem;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.total-page-amount p {
-  align-self: flex-start;
-  color: #858586;
-}
-
-.total-page-amount svg {
-  width: 2.4rem;
-  margin-left: 6rem;
-  stroke: #000;
-  stroke-width: 2;
-}
-
-.total-page-amount svg.total-rotate-arrow {
-  transform: rotate(180deg);
-  transition: transform .3s;
+  & svg.total-home-arrow {
+    animation: icon-flippp .5s;
+    animation-fill-mode: forwards
+  }
 }
 
 @keyframes total-opacity {
@@ -48,5 +28,14 @@
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes icon-flippp {
+  0% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }

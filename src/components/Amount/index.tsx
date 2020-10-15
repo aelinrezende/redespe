@@ -13,11 +13,11 @@ const Amount: React.FC<ExpensesProps> = (props) => {
   return (
     <div className="amount-container">
       <p>Total</p>
-      <div>
+      <div >
         <span>R${props.total.toFixed(2)}</span>
         <Link to={`${props.route}`}>
           <ArrowDownIcon
-            className="total-rotate-arrow"
+            className={props.route !== '/redespe' ? "total-home-arrow" : "total-rotate-arrow"}
           />
         </Link>
       </div>
