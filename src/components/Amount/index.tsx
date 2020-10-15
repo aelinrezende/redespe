@@ -4,9 +4,9 @@ import { ReactComponent as ArrowDownIcon } from '../../assets/icons/arrow.svg';
 import { Link } from 'react-router-dom';
 
 import './styles.scss';
-
 interface ExpensesProps {
   route: string;
+  total: number;
 }
 
 const Amount: React.FC<ExpensesProps> = (props) => {
@@ -14,7 +14,7 @@ const Amount: React.FC<ExpensesProps> = (props) => {
     <div className="amount-container">
       <p>Total</p>
       <div>
-        <span>R$9.430,12</span>
+        <span>R${props.total.toFixed(2)}</span>
         <Link to={`${props.route}`}>
           <ArrowDownIcon
             className="total-rotate-arrow"
