@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "19696638f6e407595db5bed851aff247",
+    "revision": "b6dd90de4f6573a1c0db0f9bf4436977",
     "url": "/redespe/index.html"
   },
   {
-    "revision": "65630a9487e40e28fc38",
-    "url": "/redespe/static/css/main.cf9e7bb8.chunk.css"
+    "revision": "85124ee9bd2a41f17a25",
+    "url": "/redespe/static/css/main.36413c52.chunk.css"
   },
   {
-    "revision": "0320d0193e88d4662d60",
-    "url": "/redespe/static/js/2.ac828afa.chunk.js"
+    "revision": "52d6e6bddaf7d13cd76a",
+    "url": "/redespe/static/js/2.7ace7f7c.chunk.js"
   },
   {
-    "revision": "3453b8997016469371284a28c0e873e2",
-    "url": "/redespe/static/js/2.ac828afa.chunk.js.LICENSE.txt"
+    "revision": "29eb69a08ea4198f7b46e1db8a3d5045",
+    "url": "/redespe/static/js/2.7ace7f7c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "65630a9487e40e28fc38",
-    "url": "/redespe/static/js/main.a9fb87e5.chunk.js"
+    "revision": "85124ee9bd2a41f17a25",
+    "url": "/redespe/static/js/main.7b62de2f.chunk.js"
   },
   {
     "revision": "c56edf29f529635fd05f",
@@ -30,6 +30,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "2c37dfad0ccbc91be8bcaefe6ef19b2c",
     "url": "/redespe/static/media/arrow_down.2c37dfad.svg"
+  },
+  {
+    "revision": "685ef0f4b503c5716de3c9a6b0c4c48a",
+    "url": "/redespe/static/media/casas_bahia_logo.685ef0f4.svg"
   },
   {
     "revision": "205a2d5552215a65145d34343a3e3aaa",

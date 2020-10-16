@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/redespe/static/css/main.cf9e7bb8.chunk.css",
-    "main.js": "/redespe/static/js/main.a9fb87e5.chunk.js",
-    "main.js.map": "/redespe/static/js/main.a9fb87e5.chunk.js.map",
+    "main.css": "/redespe/static/css/main.36413c52.chunk.css",
+    "main.js": "/redespe/static/js/main.7b62de2f.chunk.js",
+    "main.js.map": "/redespe/static/js/main.7b62de2f.chunk.js.map",
     "runtime-main.js": "/redespe/static/js/runtime-main.2e392b61.js",
     "runtime-main.js.map": "/redespe/static/js/runtime-main.2e392b61.js.map",
-    "static/js/2.ac828afa.chunk.js": "/redespe/static/js/2.ac828afa.chunk.js",
-    "static/js/2.ac828afa.chunk.js.map": "/redespe/static/js/2.ac828afa.chunk.js.map",
+    "static/js/2.7ace7f7c.chunk.js": "/redespe/static/js/2.7ace7f7c.chunk.js",
+    "static/js/2.7ace7f7c.chunk.js.map": "/redespe/static/js/2.7ace7f7c.chunk.js.map",
     "index.html": "/redespe/index.html",
-    "precache-manifest.6ebf20a7cd958a93c8646426ba763d17.js": "/redespe/precache-manifest.6ebf20a7cd958a93c8646426ba763d17.js",
+    "precache-manifest.d1a52bbd1d6ae48d6abbe3c64f368d0a.js": "/redespe/precache-manifest.d1a52bbd1d6ae48d6abbe3c64f368d0a.js",
     "service-worker.js": "/redespe/service-worker.js",
-    "static/css/main.cf9e7bb8.chunk.css.map": "/redespe/static/css/main.cf9e7bb8.chunk.css.map",
-    "static/js/2.ac828afa.chunk.js.LICENSE.txt": "/redespe/static/js/2.ac828afa.chunk.js.LICENSE.txt",
+    "static/css/main.36413c52.chunk.css.map": "/redespe/static/css/main.36413c52.chunk.css.map",
+    "static/js/2.7ace7f7c.chunk.js.LICENSE.txt": "/redespe/static/js/2.7ace7f7c.chunk.js.LICENSE.txt",
     "static/media/arrow.svg": "/redespe/static/media/arrow.9c1424d6.svg",
     "static/media/arrow_down.svg": "/redespe/static/media/arrow_down.2c37dfad.svg",
+    "static/media/casas_bahia_logo.svg": "/redespe/static/media/casas_bahia_logo.685ef0f4.svg",
     "static/media/coins.svg": "/redespe/static/media/coins.205a2d55.svg",
     "static/media/enel_logo.svg": "/redespe/static/media/enel_logo.4c30b3a2.svg",
     "static/media/sabesp_logo.svg": "/redespe/static/media/sabesp_logo.8fdb491b.svg",
@@ -21,8 +22,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.2e392b61.js",
-    "static/js/2.ac828afa.chunk.js",
-    "static/css/main.cf9e7bb8.chunk.css",
-    "static/js/main.a9fb87e5.chunk.js"
+    "static/js/2.7ace7f7c.chunk.js",
+    "static/css/main.36413c52.chunk.css",
+    "static/js/main.7b62de2f.chunk.js"
   ]
 }
