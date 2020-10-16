@@ -39,6 +39,8 @@ export default function Expenses() {
     }
 
     setExpensesTotal(total);
+
+    
   }
 
   // tracking the "opened/active" expenses bills by id
@@ -53,7 +55,7 @@ export default function Expenses() {
     }
   }
 
-  // formating date to pt-BR...
+  // formatting date to pt-BR...
   const formatDate = (date: string) => {
     const months = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
     const newDate = new Date(date);
@@ -73,7 +75,10 @@ export default function Expenses() {
       total += bills[i].value;
     }
 
-    return total.toFixed(2);
+    return total.toLocaleString(
+      undefined, 
+      { minimumFractionDigits: 2 }
+    );
   }
 
   // almost completed way of removing a specific bill from a certain expense
@@ -85,7 +90,7 @@ export default function Expenses() {
     setTotal();
   }
 
-  // almost completed way of removing a specfic expense
+  // almost completed way of removing a specific expense
   const removeExpense = (expense_index: number) => {
     let updatedExpenses = data;
     updatedExpenses.splice(expense_index, 1);
@@ -134,7 +139,7 @@ export default function Expenses() {
                           <li className="bill" key={`bill-${i}`}>
                             <div className="bill-details">
                               <span className="bill-date">{formatDate(bill.reference)}</span>
-                              <span className="bill-value">R${bill.value.toFixed(2)}</span>
+                              <span className="bill-value">R${bill.value.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
                             </div>
                             <button className="btn" onClick={() => removeBill(index, i)} ><Coins /></button>
                           </li>

@@ -3,7 +3,6 @@ import React from 'react';
 export interface ExpensesInt {
   provider: string;
   label: string;
-  value: number;
   logo: string;
   bills: Array<BillsInt>;
 }
