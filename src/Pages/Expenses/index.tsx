@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import AnimateHeight from 'react-animate-height';
 
 import Amount from '../../components/Amount/';
-import ExpensesContext, { ExpensesInt, BillsInt } from '../../expensesContext';
+import ExpensesContext, { Accounts, ExpensesInt, BillsInt } from '../../expensesContext';
 
 import { ReactComponent as Arrow } from '../../assets/icons/arrow_down.svg';
 import { ReactComponent as Coins } from '../../assets/icons/coins.svg';
@@ -10,37 +10,39 @@ import { ReactComponent as Coins } from '../../assets/icons/coins.svg';
 import './styles.scss';
 
 export default function Expenses() {
-  const data = useContext(ExpensesContext)[0] as Array<ExpensesInt>;
+  const staticData = useContext(ExpensesContext)[0] as Array<Accounts>;
+  const [currentAccount, setCurrentAccount] = useState<string>('casa_01');
   const setData = useContext(ExpensesContext)[1] as Function;
 
   const [expensesTotal, setExpensesTotal] = useState(0);
   const [billsVisibility, setBillsVisibility] = useState<Array<string>>([]);
 
   // temporary way to set the expenses value...
-  useEffect(() => { 
+  useEffect(() => {
     let total = 0;
-    for (let i = 0; i < data.length; i++) {
-      for (let b = 0; b < data[i].bills.length; b++) {
-        total += data[i].bills[b].value;
+    const current = staticData.filter(item => item.id === currentAccount)[0];
+
+    for (let i = 0; i < current.data.length; i++) {
+      for (let b = 0; b < current.data[i].bills.length; b++) {
+        total += current.data[i].bills[b].value;
       }
     }
 
     setExpensesTotal(total);
-
   }, [])
 
   // temporary way to set the expenses total value...
   const setTotal = () => {
     let total = 0;
-    for (let i = 0; i < data.length; i++) {
-      for (let b = 0; b < data[i].bills.length; b++) {
-        total += data[i].bills[b].value;
+    const current = staticData.filter(item => item.id === currentAccount)[0];
+
+    for (let i = 0; i < current.data.length; i++) {
+      for (let b = 0; b < current.data[i].bills.length; b++) {
+        total += current.data[i].bills[b].value;
       }
     }
 
     setExpensesTotal(total);
-
-    
   }
 
   // tracking the "opened/active" expenses bills by id
@@ -76,15 +78,15 @@ export default function Expenses() {
     }
 
     return total.toLocaleString(
-      undefined, 
+      undefined,
       { minimumFractionDigits: 2 }
     );
   }
 
   // almost completed way of removing a specific bill from a certain expense
   const removeBill = (expense_index: number, bill_index: number) => {
-    let updatedExpenses = data;
-    updatedExpenses[expense_index].bills.splice(bill_index, 1);
+    let updatedExpenses = staticData.filter(item => item.id === currentAccount)[0];
+    updatedExpenses.data[expense_index].bills.splice(bill_index, 1);
 
     setData(updatedExpenses);
     setTotal();
@@ -92,8 +94,8 @@ export default function Expenses() {
 
   // almost completed way of removing a specific expense
   const removeExpense = (expense_index: number) => {
-    let updatedExpenses = data;
-    updatedExpenses.splice(expense_index, 1);
+    let updatedExpenses = staticData.filter(item => item.id === currentAccount);
+    updatedExpenses[0].data.splice(expense_index, 1);
 
     setData([...updatedExpenses]);
     setTotal();
@@ -103,10 +105,10 @@ export default function Expenses() {
     <main>
       <Amount route="/redespe" total={expensesTotal}/>
       <ul className="expenses-list">
-        { data.map((expense: ExpensesInt, index: number) => {
+        { staticData.filter(item => item.id === currentAccount)[0].data.map((expense: ExpensesInt, index: number) => {
           return (
             <React.Fragment key={'despesa-' + index}>
-              { data[index].bills.length > 0 &&
+              { staticData.filter(item => item.id === currentAccount)[0].data[index].bills.length > 0 &&
                 <li className="expense-item">
                   <div className="expense-details">
                     <div className="expense-provider">
