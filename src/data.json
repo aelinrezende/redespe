@@ -1,6 +1,7 @@
 [
   {
     "id": "casa_01",
+    "label": "Casa 01",
     "data": [
       {
         "provider": "Enel",
@@ -195,6 +196,7 @@
 
   {
     "id": "casa_02",
+    "label": "Casa 02",
     "data": [
       {
         "provider": "Enel",
@@ -211,7 +213,7 @@
           },
           {
             "expire": "08/01/2019",
-            "reference": "Dez, 2018",
+            "reference": "Dec, 2018",
             "value": 176.44,
             "installment": {
               "status": false
@@ -219,7 +221,7 @@
           },
           {
             "expire": "21/01/2019",
-            "reference": "Dez, 2018",
+            "reference": "Dec, 2018",
             "value": 86.02,
             "installment": {
               "status": true,
@@ -236,7 +238,7 @@
           },
           {
             "expire": "19/02/2019",
-            "reference": "Dez, 2018",
+            "reference": "Dec, 2018",
             "value": 86.02,
             "installment": {
               "status": true,
@@ -245,7 +247,7 @@
           },
           {
             "expire": "08/03/2019",
-            "reference": "Fev, 2019",
+            "reference": "Feb, 2019",
             "value": 213.66,
             "installment": {
               "status": false
@@ -253,7 +255,7 @@
           },
           {
             "expire": "19/03/2019",
-            "reference": "Dez, 2018",
+            "reference": "Dec, 2018",
             "value": 86.02,
             "installment": {
               "status": true,
@@ -270,7 +272,7 @@
           },
           {
             "expire": "22/04/2019",
-            "reference": "Dez, 2018",
+            "reference": "Dec, 2018",
             "value": 86.02,
             "installment": {
               "status": true,
@@ -279,7 +281,7 @@
           },
           {
             "expire": "20/05/2019",
-            "reference": "Dez, 2018",
+            "reference": "Dec, 2018",
             "value": 86.02,
             "installment": {
               "status": true,
@@ -391,7 +393,7 @@
           },
           {
             "expire": "01/02/2020",
-            "reference": "Jun, 2020",
+            "reference": "Jan, 2020",
             "value": 69.10,
             "installment": {
               "status": false
@@ -399,7 +401,7 @@
           },
           {
             "expire": "01/01/2020",
-            "reference": "Dez, 2019",
+            "reference": "Dec, 2019",
             "value": 52.62,
             "installment": {
               "status": false

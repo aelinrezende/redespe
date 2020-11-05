@@ -2,20 +2,21 @@ import React, { useState, useEffect, useContext } from 'react';
 import AnimateHeight from 'react-animate-height';
 
 import Amount from '../../components/Amount/';
+
 import ExpensesContext, { Accounts, ExpensesInt, BillsInt } from '../../expensesContext';
+import CurrentAccountContext from '../../currentAccountContext';
 
 import { ReactComponent as Arrow } from '../../assets/icons/arrow_down.svg';
 import { ReactComponent as Coins } from '../../assets/icons/coins.svg';
 
-import './styles.scss';
+import './styles.scss'; 
 
 export default function Expenses() {
   const staticData = useContext(ExpensesContext)[0] as Array<Accounts>;
+  const setData = useContext(ExpensesContext)[1] as Function;
   const currentAccount = useContext(CurrentAccountContext)[0] as string;
   const setCurrentAccount = useContext(CurrentAccountContext)[1] as Function;
   const [accountsIDs, setAccountsIDs] = useState<Array<string>>([]);
-  const setData = useContext(ExpensesContext)[1] as Function;
-
   const [expensesTotal, setExpensesTotal] = useState(0);
   const [billsVisibility, setBillsVisibility] = useState<Array<string>>([]);
 
@@ -37,7 +38,6 @@ export default function Expenses() {
       });
 
       setAccountsIDs([...array]);
-      console.log(accountsIDs, currentAccount);
     }
 
     setExpensesTotal(total);
@@ -97,7 +97,6 @@ export default function Expenses() {
     updatedExpenses[0].data[expense_index].bills.splice(bill_index, 1);
 
     setData([...updatedExpenses]);
-    setTotal();
   }
 
   // almost completed way of removing a specific expense
@@ -106,7 +105,6 @@ export default function Expenses() {
     updatedExpenses[0].data.splice(expense_index, 1);
 
     setData([...updatedExpenses]);
-    setTotal();
   }
 
   return (

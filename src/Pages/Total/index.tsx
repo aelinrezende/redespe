@@ -1,7 +1,7 @@
 import React, { useState, useContext, useEffect } from 'react';
 
 import Amount from '../../components/Amount/';
-import ExpensesContext, { Accounts, ExpensesInt } from '../../expensesContext';
+import ExpensesContext, { Accounts } from '../../expensesContext';
 import CurrentAccountContext from '../../currentAccountContext';
 
 import { ReactComponent as ToggleIcon } from '../../assets/icons/arrow.svg';
@@ -32,7 +32,6 @@ export default function Total() {
       });
 
       setAccountsIDs([...array]);
-      console.log(accountsIDs, currentAccount);
     }
 
     setExpensesTotal(total);
@@ -46,8 +45,6 @@ export default function Total() {
     } else {
       setCurrentAccount(accountsIDs[currentAccountIndex + 1]);
     }
-
-    console.log(accountsIDs);
   }
 
   return (

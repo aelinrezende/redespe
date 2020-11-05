@@ -1,7 +1,7 @@
 import React from 'react';
-
 export interface Accounts {
   id: string;
+  label: string;
   data: Array<ExpensesInt>
 }
 
