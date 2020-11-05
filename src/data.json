@@ -12,7 +12,7 @@
             "reference": "Oct, 2019",
             "value": 410.66,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -20,7 +20,7 @@
             "reference": "Sep, 2019",
             "value": 450.83,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -28,7 +28,7 @@
             "reference": "Nov, 2019",
             "value": 452.31,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -36,7 +36,7 @@
             "reference": "Jan, 2020",
             "value": 388.91,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -44,7 +44,7 @@
             "reference": "Feb, 2020",
             "value": 452.03,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -52,7 +52,7 @@
             "reference": "Mar, 2020",
             "value": 271.02,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -60,7 +60,7 @@
             "reference": "Jul, 2020",
             "value": 750.53,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -68,7 +68,7 @@
             "reference": "Sep, 2020",
             "value": 111.70,
             "installment": {
-              "status": false,
+              "status": false
             }
           }
         ]
@@ -83,7 +83,7 @@
             "reference": "Feb, 2020",
             "value": 83.81,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -91,7 +91,7 @@
             "reference": "Apr, 2020",
             "value": 105.24,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -99,7 +99,7 @@
             "reference": "May, 2020",
             "value": 154.69,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -107,7 +107,7 @@
             "reference": "Jun, 2020",
             "value": 105.24,
             "installment": {
-              "status": false,
+              "status": false
             }
           }
         ]
@@ -122,7 +122,7 @@
             "reference": "Sep, 2020",
             "value": 211.20,
             "installment": {
-              "status": false,
+              "status": false
             }
           }
         ]
@@ -137,7 +137,7 @@
             "reference": "oct, 2020",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -145,7 +145,7 @@
             "reference": "Dec, 2020",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -153,7 +153,7 @@
             "reference": "Nov, 2020",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -161,7 +161,7 @@
             "reference": "Jan, 2021",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -169,7 +169,7 @@
             "reference": "Mar, 2021",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -177,7 +177,7 @@
             "reference": "Feb, 2021",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -185,7 +185,7 @@
             "reference": "Apr, 2021",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           }
         ]
@@ -206,7 +206,7 @@
             "reference": "Oct, 2020",
             "value": 189.29,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -214,7 +214,7 @@
             "reference": "Dez, 2018",
             "value": 176.44,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -231,7 +231,7 @@
             "reference": "Jan, 2019",
             "value": 245.83,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -248,7 +248,7 @@
             "reference": "Fev, 2019",
             "value": 213.66,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -265,7 +265,7 @@
             "reference": "Mar, 2019",
             "value": 15.35,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -291,7 +291,7 @@
             "reference": "Jul, 2020",
             "value": 40.72,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -299,7 +299,7 @@
             "reference": "Aug, 2020",
             "value": 35.92,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -307,7 +307,7 @@
             "reference": "Sep, 2020",
             "value": 136.91,
             "installment": {
-              "status": false,
+              "status": false
             }
           }
         ]
@@ -322,7 +322,7 @@
             "reference": "Oct, 2020",
             "value": 54.41,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -330,7 +330,7 @@
             "reference": "Sep, 2020",
             "value": 54.29,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -338,7 +338,7 @@
             "reference": "Aug, 2020",
             "value": 52.62,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -346,7 +346,7 @@
             "reference": "Jul, 2020",
             "value": 52.62,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -354,7 +354,7 @@
             "reference": "Jun, 2020",
             "value": 52.62,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -362,7 +362,7 @@
             "reference": "May, 2020",
             "value": 52.62,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -370,7 +370,7 @@
             "reference": "Apr, 2020",
             "value": 52.62,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -378,7 +378,7 @@
             "reference": "Mar, 2020",
             "value": 60.66,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -386,7 +386,7 @@
             "reference": "Feb, 2020",
             "value": 258.40,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -394,7 +394,7 @@
             "reference": "Jun, 2020",
             "value": 69.10,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -402,7 +402,7 @@
             "reference": "Dez, 2019",
             "value": 52.62,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -410,7 +410,7 @@
             "reference": "Nov, 2019",
             "value": 134.02,
             "installment": {
-              "status": false,
+              "status": false
             }
           }
         ]
@@ -425,7 +425,7 @@
             "reference": "Sep, 2020",
             "value": 211.20,
             "installment": {
-              "status": false,
+              "status": false
             }
           }
         ]
@@ -440,7 +440,7 @@
             "reference": "oct, 2020",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -448,7 +448,7 @@
             "reference": "Dec, 2020",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -456,7 +456,7 @@
             "reference": "Nov, 2020",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -464,7 +464,7 @@
             "reference": "Jan, 2021",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -472,7 +472,7 @@
             "reference": "Mar, 2021",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -480,7 +480,7 @@
             "reference": "Feb, 2021",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           },
           {
@@ -488,7 +488,7 @@
             "reference": "Apr, 2021",
             "value": 186.61,
             "installment": {
-              "status": false,
+              "status": false
             }
           }
         ]

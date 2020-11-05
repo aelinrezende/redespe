@@ -20,7 +20,7 @@ export default function Expenses() {
   // temporary way to set the expenses value...
   useEffect(() => {
     let total = 0;
-    const current = staticData.filter(item => item.id === currentAccount)[0];
+    const [current] = staticData.filter(item => item.id === currentAccount);
 
     for (let i = 0; i < current.data.length; i++) {
       for (let b = 0; b < current.data[i].bills.length; b++) {
@@ -34,7 +34,7 @@ export default function Expenses() {
   // temporary way to set the expenses total value...
   const setTotal = () => {
     let total = 0;
-    const current = staticData.filter(item => item.id === currentAccount)[0];
+    const [current] = staticData.filter(item => item.id === currentAccount);
 
     for (let i = 0; i < current.data.length; i++) {
       for (let b = 0; b < current.data[i].bills.length; b++) {
@@ -85,10 +85,10 @@ export default function Expenses() {
 
   // almost completed way of removing a specific bill from a certain expense
   const removeBill = (expense_index: number, bill_index: number) => {
-    let updatedExpenses = staticData.filter(item => item.id === currentAccount)[0];
-    updatedExpenses.data[expense_index].bills.splice(bill_index, 1);
+    let updatedExpenses = staticData.filter(item => item.id === currentAccount);
+    updatedExpenses[0].data[expense_index].bills.splice(bill_index, 1);
 
-    setData(updatedExpenses);
+    setData([...updatedExpenses]);
     setTotal();
   }
 
