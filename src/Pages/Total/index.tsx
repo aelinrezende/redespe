@@ -10,12 +10,9 @@ import './styles.scss';
 
 export default function Total() {
   const staticData = useContext(ExpensesContext)[0] as Array<Accounts>;
-
   const currentAccount = useContext(CurrentAccountContext)[0] as string;
   const setCurrentAccount = useContext(CurrentAccountContext)[1] as Function;
-
   const [accountsIDs, setAccountsIDs] = useState<Array<string>>([]);
-
   const [expensesTotal, setExpensesTotal] = useState(0);
 
   useEffect(() => {
@@ -41,7 +38,7 @@ export default function Total() {
     setExpensesTotal(total);
   }, [currentAccount]);
 
-  function toggleAccount() {
+  const toggleAccount = () => {
     const currentAccountIndex = accountsIDs.indexOf(currentAccount);
 
     if (currentAccountIndex + 1 === accountsIDs.length || accountsIDs.length === 1) {
