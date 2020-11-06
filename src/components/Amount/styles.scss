@@ -1,25 +1,49 @@
 .amount-container {
-  font-size: 2.8rem;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  padding: 1.6rem;
+  width: 100%;
+  font-size: 2.8rem;
+  padding: 1.6rem 2.4rem;
   animation: total-opacity 2s;
   animation-fill-mode: forwards;
 
-  & p {
-    align-self: flex-start;
-    color: #858586;
-  }
+  & > div {
+    min-width: 20rem;
 
-  & svg {
-    width: 2.4rem;
-    margin-left: 6rem;
-    stroke: #000;
-    stroke-width: 2;
-  }
-
-  & svg.total-rotate-arrow {
-    animation: icon-flip .5s;
-    animation-fill-mode: forwards
+    & p {
+      align-self: flex-start;
+      color: #858586;
+    }
+    
+    & .account-toggle, .total-details {
+      display: flex;
+      align-items: center;
+    }
+  
+    & .account-toggle {
+      font-size: 1.8rem;
+  
+      & svg {
+        margin-left: .8rem;
+        width: 2.2rem;
+      }
+    }
+  
+    & .total-details {
+      justify-content: space-between;
+  
+      & svg {
+        width: 2.4rem;
+        stroke: #000;
+        stroke-width: 2;
+      }
+  
+      & svg.total-rotate-arrow {
+        animation: icon-flip .5s;
+        animation-fill-mode: forwards
+      }
+    }
   }
 }
 

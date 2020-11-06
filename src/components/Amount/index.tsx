@@ -53,18 +53,20 @@ const Amount: React.FC<ExpensesProps> = (props) => {
 
   return (
     <div className="amount-container">
-      <div className="account-toggle" onClick={() => toggleAccount()}>
-        {staticData.filter(item => item.id === currentAccount)[0].label}
-        <ToggleIcon/>
-      </div>
-      <p>Total</p>
       <div>
-        <span>R${expensesTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
-        <Link to={`${props.route}`}>
-          <ArrowDownIcon
-            className={props.route !== '/redespe' ? "total-home-arrow" : "total-rotate-arrow"}
-          />
-        </Link>
+        <p>Total</p>
+        <div className="account-toggle" onClick={() => toggleAccount()}>
+          {staticData.filter(item => item.id === currentAccount)[0].label}
+          <ToggleIcon/>
+        </div>
+        <div className="total-details">
+          <span>R${expensesTotal.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
+          <Link to={`${props.route}`}>
+            <ArrowDownIcon
+              className={props.route !== '/redespe' ? "total-home-arrow" : "total-rotate-arrow"}
+            />
+          </Link>
+        </div>
       </div>
     </div>
   )
