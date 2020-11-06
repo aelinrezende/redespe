@@ -39,7 +39,7 @@ const Amount: React.FC<ExpensesProps> = (props) => {
     }
 
     setExpensesTotal(total);
-  }, [currentAccount]);
+  }, [currentAccount, staticData]);
 
   const toggleAccount = () => {
     const currentAccountIndex = accountsIDs.indexOf(currentAccount);
