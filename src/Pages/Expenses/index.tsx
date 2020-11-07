@@ -57,16 +57,28 @@ export default function Expenses() {
 
   // almost completed way of removing a specific bill from a certain expense
   const removeBill = (expense_index: number, bill_index: number) => {
-    let updatedExpenses = staticData.filter(item => item.id === currentAccount);
-    updatedExpenses[0].data[expense_index].bills.splice(bill_index, 1);
+    let updatedExpenses = staticData;
+    staticData.map((account, i: number) => {
+      if (account.id === currentAccount) {
+        updatedExpenses[i].data[expense_index].bills.splice(bill_index, 1);
+      }
+    });
+
+    console.log(updatedExpenses)
 
     setData([...updatedExpenses]);
   }
 
   // almost completed way of removing a specific expense
   const removeExpense = (expense_index: number) => {
-    let updatedExpenses = staticData.filter(item => item.id === currentAccount);
-    updatedExpenses[0].data.splice(expense_index, 1);
+    let updatedExpenses = staticData;
+    staticData.map((account, i: number) => {
+      if (account.id === currentAccount) {
+        updatedExpenses[i].data.splice(expense_index, 1);
+      }
+    });
+
+    console.log(updatedExpenses)
 
     setData([...updatedExpenses]);
   }
@@ -112,6 +124,9 @@ export default function Expenses() {
                         return (
                           <li className="bill" key={`bill-${i}`}>
                             <div className="bill-details">
+                              { bill.installment.status && 
+                                <span className="bill-installment">Acordo - Parcela {bill.installment.reference}</span> 
+                              }
                               <span className="bill-date">{formatDate(bill.reference)}</span>
                               <span className="bill-value">R${bill.value.toLocaleString(undefined, { minimumFractionDigits: 2 })}</span>
                             </div>

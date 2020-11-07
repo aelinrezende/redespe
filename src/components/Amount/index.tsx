@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import ExpensesContext, { Accounts } from '../../expensesContext';
 import CurrentAccountContext from '../../currentAccountContext';
 
-import { ReactComponent as ToggleIcon } from '../../assets/icons/arrow.svg';
+import { ReactComponent as ToggleIcon } from '../../assets/icons/toggle.svg';
 import { ReactComponent as ArrowDownIcon } from '../../assets/icons/arrow.svg';
 
 import './styles.scss';

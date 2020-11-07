@@ -20,10 +20,12 @@
 
   & .account-toggle {
     font-size: 1.8rem;
+    cursor: pointer;
 
     & svg {
       margin-left: .8rem;
       width: 2.2rem;
+      height: auto;
     }
   }
 
