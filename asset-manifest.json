@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "/redespe/static/css/main.36413c52.chunk.css",
-    "main.js": "/redespe/static/js/main.7b62de2f.chunk.js",
-    "main.js.map": "/redespe/static/js/main.7b62de2f.chunk.js.map",
+    "main.css": "/redespe/static/css/main.f93cf0b1.chunk.css",
+    "main.js": "/redespe/static/js/main.4062ecdb.chunk.js",
+    "main.js.map": "/redespe/static/js/main.4062ecdb.chunk.js.map",
     "runtime-main.js": "/redespe/static/js/runtime-main.2e392b61.js",
     "runtime-main.js.map": "/redespe/static/js/runtime-main.2e392b61.js.map",
-    "static/js/2.7ace7f7c.chunk.js": "/redespe/static/js/2.7ace7f7c.chunk.js",
-    "static/js/2.7ace7f7c.chunk.js.map": "/redespe/static/js/2.7ace7f7c.chunk.js.map",
+    "static/js/2.1c1e7f1f.chunk.js": "/redespe/static/js/2.1c1e7f1f.chunk.js",
+    "static/js/2.1c1e7f1f.chunk.js.map": "/redespe/static/js/2.1c1e7f1f.chunk.js.map",
     "index.html": "/redespe/index.html",
-    "precache-manifest.d1a52bbd1d6ae48d6abbe3c64f368d0a.js": "/redespe/precache-manifest.d1a52bbd1d6ae48d6abbe3c64f368d0a.js",
+    "precache-manifest.ad3e71c45f7d8be2aa0446f8163e678e.js": "/redespe/precache-manifest.ad3e71c45f7d8be2aa0446f8163e678e.js",
     "service-worker.js": "/redespe/service-worker.js",
-    "static/css/main.36413c52.chunk.css.map": "/redespe/static/css/main.36413c52.chunk.css.map",
-    "static/js/2.7ace7f7c.chunk.js.LICENSE.txt": "/redespe/static/js/2.7ace7f7c.chunk.js.LICENSE.txt",
+    "static/css/main.f93cf0b1.chunk.css.map": "/redespe/static/css/main.f93cf0b1.chunk.css.map",
+    "static/js/2.1c1e7f1f.chunk.js.LICENSE.txt": "/redespe/static/js/2.1c1e7f1f.chunk.js.LICENSE.txt",
     "static/media/arrow.svg": "/redespe/static/media/arrow.9c1424d6.svg",
     "static/media/arrow_down.svg": "/redespe/static/media/arrow_down.2c37dfad.svg",
     "static/media/casas_bahia_logo.svg": "/redespe/static/media/casas_bahia_logo.685ef0f4.svg",
     "static/media/coins.svg": "/redespe/static/media/coins.205a2d55.svg",
     "static/media/enel_logo.svg": "/redespe/static/media/enel_logo.4c30b3a2.svg",
     "static/media/sabesp_logo.svg": "/redespe/static/media/sabesp_logo.8fdb491b.svg",
+    "static/media/toggle.svg": "/redespe/static/media/toggle.654ad98d.svg",
     "static/media/vivo_logo.svg": "/redespe/static/media/vivo_logo.a1b563b2.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2e392b61.js",
-    "static/js/2.7ace7f7c.chunk.js",
-    "static/css/main.36413c52.chunk.css",
-    "static/js/main.7b62de2f.chunk.js"
+    "static/js/2.1c1e7f1f.chunk.js",
+    "static/css/main.f93cf0b1.chunk.css",
+    "static/js/main.4062ecdb.chunk.js"
   ]
 }
