@@ -73,12 +73,6 @@ ul {
     }
 }
 
-@media (min-width: 700px) {
-    :root {
-        font-size: 62.5%;
-    }
-}
-
 @media (min-width: 350px) {
     :root {
         font-size: 60%;
