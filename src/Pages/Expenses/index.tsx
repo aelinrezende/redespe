@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from 'react';
 import AnimateHeight from 'react-animate-height';
 
+import { formatDate, sortByDate } from '../utils/formatDate';
+
 import Amount from '../../components/Amount/';
 
 import ExpensesContext, { Accounts, ExpensesInt, BillsInt } from '../../expensesContext';
@@ -29,19 +31,6 @@ export default function Expenses() {
     }
   }
 
-  // formatting date to pt-BR...
-  const formatDate = (date: string) => {
-    const months = ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez'];
-    const newDate = new Date(date);
-
-    return `${months[newDate.getMonth()]}, ${newDate.getFullYear()}`;
-  }
-
-  // sorting array by date
-  const sortByDate = (a:string, b: string) => {
-    return new Date(a).valueOf() - new Date(b).valueOf();
-  }
-
   // getting the expense bills total
   const getBillsTotal = (bills: Array<BillsInt>) => {
     let total = 0;
@@ -58,13 +47,11 @@ export default function Expenses() {
   // almost completed way of removing a specific bill from a certain expense
   const removeBill = (expense_index: number, bill_index: number) => {
     let updatedExpenses = staticData;
-    staticData.map((account, i: number) => {
+    staticData.forEach((account, i: number) => {
       if (account.id === currentAccount) {
         updatedExpenses[i].data[expense_index].bills.splice(bill_index, 1);
       }
     });
-
-    console.log(updatedExpenses)
 
     setData([...updatedExpenses]);
   }
@@ -77,8 +64,6 @@ export default function Expenses() {
         updatedExpenses[i].data.splice(expense_index, 1);
       }
     });
-
-    console.log(updatedExpenses)
 
     setData([...updatedExpenses]);
   }
