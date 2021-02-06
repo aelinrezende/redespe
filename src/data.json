@@ -311,6 +311,30 @@
             "installment": {
               "status": false
             }
+          },
+          {
+            "expire": "08/12/2020",
+            "reference": "Nov, 2020",
+            "value": 180.68,
+            "installment": {
+              "status": false
+            }
+          },
+          {
+            "expire": "08/01/2021",
+            "reference": "Dez, 2020",
+            "value": 124.07,
+            "installment": {
+              "status": false
+            }
+          },
+          {
+            "expire": "08/02/2021",
+            "reference": "Jan, 2021",
+            "value": 79.03,
+            "installment": {
+              "status": false
+            }
           }
         ]
       },
@@ -319,6 +343,30 @@
         "label": "Àgua",
         "logo": "sabesp_logo",
         "bills": [
+          {
+            "expire": "01/02/2021",
+            "reference": "Jan, 2020",
+            "value": 54.41,
+            "installment": {
+              "status": false
+            }
+          },
+          {
+            "expire": "01/01/2021",
+            "reference": "Dec, 2020",
+            "value": 54.41,
+            "installment": {
+              "status": false
+            }
+          },
+          {
+            "expire": "01/12/2020",
+            "reference": "Nov, 2020",
+            "value": 54.41,
+            "installment": {
+              "status": false
+            }
+          },,
           {
             "expire": "01/11/2020",
             "reference": "Oct, 2020",
@@ -422,14 +470,7 @@
         "label": "Internet + Fixo",
         "logo": "vivo_logo",
         "bills": [
-          {
-            "expire": "15/02/2020",
-            "reference": "Sep, 2020",
-            "value": 215.20,
-            "installment": {
-              "status": false
-            }
-          }
+          
         ]
       },
       {
@@ -437,62 +478,7 @@
         "label": "Celular",
         "logo": "casas_bahia_logo",
         "bills": [
-          {
-            "expire": "01/10/2020",
-            "reference": "oct, 2020",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "01/12/2020",
-            "reference": "Dec, 2020",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "01/11/2020",
-            "reference": "Nov, 2020",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "01/01/2021",
-            "reference": "Jan, 2021",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "01/03/2021",
-            "reference": "Mar, 2021",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "01/02/2021",
-            "reference": "Feb, 2021",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "01/04/2021",
-            "reference": "Apr, 2021",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
-          }
+          
         ]
       }
     ]
