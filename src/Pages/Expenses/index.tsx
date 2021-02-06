@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import AnimateHeight from 'react-animate-height';
 
-import { formatDate, sortByDate } from '../utils/formatDate';
+import { formatDate, sortByDate } from '../utils/date';
 
 import Amount from '../../components/Amount/';
 
