@@ -1,30 +1,30 @@
 {
   "files": {
-    "main.css": "/redespe/static/css/main.5c69bf94.chunk.css",
-    "main.js": "/redespe/static/js/main.c8abb013.chunk.js",
-    "main.js.map": "/redespe/static/js/main.c8abb013.chunk.js.map",
+    "main.css": "/redespe/static/css/main.eb20be66.chunk.css",
+    "main.js": "/redespe/static/js/main.a67007d4.chunk.js",
+    "main.js.map": "/redespe/static/js/main.a67007d4.chunk.js.map",
     "runtime-main.js": "/redespe/static/js/runtime-main.2e392b61.js",
     "runtime-main.js.map": "/redespe/static/js/runtime-main.2e392b61.js.map",
-    "static/js/2.1c1e7f1f.chunk.js": "/redespe/static/js/2.1c1e7f1f.chunk.js",
-    "static/js/2.1c1e7f1f.chunk.js.map": "/redespe/static/js/2.1c1e7f1f.chunk.js.map",
+    "static/js/2.afbe7a7c.chunk.js": "/redespe/static/js/2.afbe7a7c.chunk.js",
+    "static/js/2.afbe7a7c.chunk.js.map": "/redespe/static/js/2.afbe7a7c.chunk.js.map",
     "index.html": "/redespe/index.html",
-    "precache-manifest.ff77d5b1e5dfe53cc0c70da0396b75e6.js": "/redespe/precache-manifest.ff77d5b1e5dfe53cc0c70da0396b75e6.js",
+    "precache-manifest.a1696757cb24bec6349d19a30b28a3d9.js": "/redespe/precache-manifest.a1696757cb24bec6349d19a30b28a3d9.js",
     "service-worker.js": "/redespe/service-worker.js",
-    "static/css/main.5c69bf94.chunk.css.map": "/redespe/static/css/main.5c69bf94.chunk.css.map",
-    "static/js/2.1c1e7f1f.chunk.js.LICENSE.txt": "/redespe/static/js/2.1c1e7f1f.chunk.js.LICENSE.txt",
-    "static/media/arrow.svg": "/redespe/static/media/arrow.9c1424d6.svg",
-    "static/media/arrow_down.svg": "/redespe/static/media/arrow_down.2c37dfad.svg",
-    "static/media/casas_bahia_logo.svg": "/redespe/static/media/casas_bahia_logo.685ef0f4.svg",
-    "static/media/coins.svg": "/redespe/static/media/coins.205a2d55.svg",
-    "static/media/enel_logo.svg": "/redespe/static/media/enel_logo.4c30b3a2.svg",
-    "static/media/sabesp_logo.svg": "/redespe/static/media/sabesp_logo.8fdb491b.svg",
+    "static/css/main.eb20be66.chunk.css.map": "/redespe/static/css/main.eb20be66.chunk.css.map",
+    "static/js/2.afbe7a7c.chunk.js.LICENSE.txt": "/redespe/static/js/2.afbe7a7c.chunk.js.LICENSE.txt",
+    "static/media/arrow.svg": "/redespe/static/media/arrow.50aa945b.svg",
+    "static/media/arrow_down.svg": "/redespe/static/media/arrow_down.25df96de.svg",
+    "static/media/casas_bahia_logo.svg": "/redespe/static/media/casas_bahia_logo.6da96e8a.svg",
+    "static/media/coins.svg": "/redespe/static/media/coins.78ccff53.svg",
+    "static/media/enel_logo.svg": "/redespe/static/media/enel_logo.3bfe2090.svg",
+    "static/media/sabesp_logo.svg": "/redespe/static/media/sabesp_logo.846e916c.svg",
     "static/media/toggle.svg": "/redespe/static/media/toggle.654ad98d.svg",
-    "static/media/vivo_logo.svg": "/redespe/static/media/vivo_logo.a1b563b2.svg"
+    "static/media/vivo_logo.svg": "/redespe/static/media/vivo_logo.5ee90c6c.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2e392b61.js",
-    "static/js/2.1c1e7f1f.chunk.js",
-    "static/css/main.5c69bf94.chunk.css",
-    "static/js/main.c8abb013.chunk.js"
+    "static/js/2.afbe7a7c.chunk.js",
+    "static/css/main.eb20be66.chunk.css",
+    "static/js/main.a67007d4.chunk.js"
   ]
 }
