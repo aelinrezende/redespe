@@ -1,15 +1,17 @@
 import React from 'react';
 
 import Amount from '../../components/Amount/';
+import Navbar from '../../components/Navbar/';
 
-import './styles.scss';
+import { Container } from './styles';
 
-export default function Total() {
-  return (
-    <div className="total-page">
-      <Amount 
-        route="/redespe/expenses" 
-      />
-    </div>
-  )
-}
+const Total: React.FC = () => {
+	return (
+		<Container>
+			<Amount route="/redespe/expenses" />
+			<Navbar />
+		</Container>
+	);
+};
+
+export default Total;

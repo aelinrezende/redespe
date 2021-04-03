@@ -1,4 +1,6 @@
-import React, { createContext, useCallback, useContext, useEffect, useState } from 'react';
+import React, {
+  createContext, useCallback, useContext, useEffect, useState,
+} from 'react';
 
 import staticData from '../data.json';
 
@@ -41,12 +43,12 @@ const ExpenseContext = createContext<ExpenseContextData>({} as ExpenseContextDat
 
 const ExpenseProvider: React.FC = ({ children }) => {
   const [accounts, setAccounts] = useState<AccountsProps[]>(staticData);
-  const [accountsIDs,] = useState<number[]>(() => {
+  const [accountsIDs] = useState<number[]>(() => {
     const array: number[] = [];
     accounts.forEach((_, i) => {
       array.push(i);
     });
-    
+
     return array;
   });
   const [currentAccount, setCurrentAccount] = useState<number>(0);
@@ -67,27 +69,27 @@ const ExpenseProvider: React.FC = ({ children }) => {
             total.currentAccount += bill.value;
           }
         });
-      })
+      });
     });
-    
+
     setTotals(total);
   }, [accounts, setTotals, currentAccount]);
 
   const removeExpense = useCallback((expenseIndex: number) => {
     const array = accounts;
-    
+
     array[currentAccount].data.splice(expenseIndex, 1);
 
     setAccounts([...array]);
-  }, [accounts, currentAccount])
+  }, [accounts, currentAccount]);
 
   const removeBill = useCallback((expenseIndex: number, billIndex: number) => {
     const array = accounts;
-    
+
     array[currentAccount].data[expenseIndex].bills.splice(billIndex, 1);
 
     setAccounts([...array]);
-  }, [accounts, currentAccount])
+  }, [accounts, currentAccount]);
 
   const toggleAccount = useCallback(() => {
     const currentAccountIndex = accountsIDs.indexOf(currentAccount);
@@ -100,11 +102,14 @@ const ExpenseProvider: React.FC = ({ children }) => {
   }, [accountsIDs, currentAccount]);
 
   return (
-    <ExpenseContext.Provider value={{ account: accounts[currentAccount], removeExpense, removeBill, toggleAccount, currentAccount, totals }}>
+    <ExpenseContext.Provider value={{
+      account: accounts[currentAccount], removeExpense, removeBill, toggleAccount, currentAccount, totals,
+    }}
+    >
       {children}
     </ExpenseContext.Provider>
-  )
-}
+  );
+};
 
 function useExpense(): ExpenseContextData {
   const context = useContext(ExpenseContext);
