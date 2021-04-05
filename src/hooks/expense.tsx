@@ -1,5 +1,9 @@
 import React, {
-  createContext, useCallback, useContext, useEffect, useState,
+  createContext,
+  useCallback,
+  useContext,
+  useEffect,
+  useState,
 } from 'react';
 
 import staticData from '../data.json';
@@ -10,16 +14,13 @@ interface ExpenseContextData {
   removeExpense(expenseIndex: number): void;
   removeBill(expenseIndex: number, billIndex: number): void;
   toggleAccount(): void;
-  totals: {
-    currentAccount: number;
-    full: number;
-  }
+  totals: TotalsProps;
 }
 
 export interface AccountsProps {
   id: string;
   label: string;
-  data: Array<ExpensesProps>
+  data: Array<ExpensesProps>;
 }
 
 export interface ExpensesProps {
@@ -34,12 +35,20 @@ export interface BillsProps {
   reference: string;
   value: number;
   installment: {
-    status: boolean,
-    reference?: number
-  }
+    status: boolean;
+    reference?: number;
+  };
 }
 
-const ExpenseContext = createContext<ExpenseContextData>({} as ExpenseContextData);
+interface TotalsProps {
+  currentAccount: number;
+  monthly: number;
+  full: number;
+}
+
+const ExpenseContext = createContext<ExpenseContextData>(
+  {} as ExpenseContextData,
+);
 
 const ExpenseProvider: React.FC = ({ children }) => {
   const [accounts, setAccounts] = useState<AccountsProps[]>(staticData);
@@ -51,23 +60,31 @@ const ExpenseProvider: React.FC = ({ children }) => {
 
     return array;
   });
+
   const [currentAccount, setCurrentAccount] = useState<number>(0);
-  const [totals, setTotals] = useState<{ currentAccount: number, full: number }>({ currentAccount: 0, full: 0 });
+  const [totals, setTotals] = useState<TotalsProps>({
+    currentAccount: 0,
+    monthly: 0,
+    full: 0,
+  });
 
   useEffect(() => {
     const total = {
       currentAccount: 0,
+      monthly: 0,
       full: 0,
     };
 
     accounts.forEach((account, accountIndex) => {
-      account.data.forEach((expense) => {
-        expense.bills.forEach((bill) => {
+      account.data.forEach(expense => {
+        if (expense.bills.length)
+          total.monthly += expense.bills[expense.bills.length - 1].value;
+
+        expense.bills.forEach(bill => {
           total.full += bill.value;
 
-          if (currentAccount === accountIndex) {
+          if (currentAccount === accountIndex)
             total.currentAccount += bill.value;
-          }
         });
       });
     });
@@ -75,26 +92,35 @@ const ExpenseProvider: React.FC = ({ children }) => {
     setTotals(total);
   }, [accounts, setTotals, currentAccount]);
 
-  const removeExpense = useCallback((expenseIndex: number) => {
-    const array = accounts;
+  const removeExpense = useCallback(
+    (expenseIndex: number) => {
+      const array = accounts;
 
-    array[currentAccount].data.splice(expenseIndex, 1);
+      array[currentAccount].data.splice(expenseIndex, 1);
 
-    setAccounts([...array]);
-  }, [accounts, currentAccount]);
+      setAccounts([...array]);
+    },
+    [accounts, currentAccount],
+  );
 
-  const removeBill = useCallback((expenseIndex: number, billIndex: number) => {
-    const array = accounts;
+  const removeBill = useCallback(
+    (expenseIndex: number, billIndex: number) => {
+      const array = accounts;
 
-    array[currentAccount].data[expenseIndex].bills.splice(billIndex, 1);
+      array[currentAccount].data[expenseIndex].bills.splice(billIndex, 1);
 
-    setAccounts([...array]);
-  }, [accounts, currentAccount]);
+      setAccounts([...array]);
+    },
+    [accounts, currentAccount],
+  );
 
   const toggleAccount = useCallback(() => {
     const currentAccountIndex = accountsIDs.indexOf(currentAccount);
 
-    if (currentAccountIndex + 1 === accountsIDs.length || accountsIDs.length === 1) {
+    if (
+      currentAccountIndex + 1 === accountsIDs.length ||
+      accountsIDs.length === 1
+    ) {
       setCurrentAccount(accountsIDs[0]);
     } else {
       setCurrentAccount(accountsIDs[currentAccountIndex + 1]);
@@ -102,9 +128,15 @@ const ExpenseProvider: React.FC = ({ children }) => {
   }, [accountsIDs, currentAccount]);
 
   return (
-    <ExpenseContext.Provider value={{
-      account: accounts[currentAccount], removeExpense, removeBill, toggleAccount, currentAccount, totals,
-    }}
+    <ExpenseContext.Provider
+      value={{
+        account: accounts[currentAccount],
+        removeExpense,
+        removeBill,
+        toggleAccount,
+        currentAccount,
+        totals,
+      }}
     >
       {children}
     </ExpenseContext.Provider>

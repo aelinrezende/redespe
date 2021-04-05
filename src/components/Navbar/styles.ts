@@ -1,14 +1,7 @@
 import { Link } from 'react-router-dom';
 import styled, { keyframes } from 'styled-components';
-
-const optionsVisibleAnimation = keyframes`
-	to {
-		transform: translate(50%, 0);
-		height: auto;
-		overflow: visible;
-		opacity: 1;
-	}
-`;
+import { CgOptions } from 'react-icons/cg';
+import { motion } from 'framer-motion';
 
 export const NavContainer = styled.nav`
 	position: absolute;
@@ -36,25 +29,17 @@ export const NavButton = styled.button`
 	border-radius: 50%;
 `;
 
-export const OptionsContainer = styled.form`
+export const OptionsContainer = styled(motion.ul)`
 	position: absolute;
 	bottom: 100%;
+	transform: translateX(50%);
 	right: 50%;
 
 	width: 20rem;
 	margin-bottom: 1rem;
-
-	transform: translate(50%, 10px);
-	height: 0;
-	overflow: hidden;
-	opacity: 0;
-
-	${NavButton}:focus & {
-		animation: ${optionsVisibleAnimation} 1s forwards;
-	}
 `;
 
-export const Option = styled.button`
+export const Option = styled(motion.li)`
 	border: 2px solid #dedede;
 	border-radius: 5px;
 	padding: 1rem;
@@ -65,3 +50,5 @@ export const Option = styled.button`
 `;
 
 export const NavAnchor = styled(Link)``;
+
+export const OptionsIcon = styled(CgOptions)``;

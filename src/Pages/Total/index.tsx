@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 
 import Amount from '../../components/Amount/';
 import Navbar from '../../components/Navbar/';
@@ -14,4 +14,4 @@ const Total: React.FC = () => {
 	);
 };
 
-export default Total;
+export default memo(Total);
