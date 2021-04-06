@@ -1,5 +1,6 @@
 import React, { useState, useCallback, memo } from 'react';
 import AnimateHeight from 'react-animate-height';
+import { v4 } from 'uuid';
 
 import { formatDate, sortArrayOfObjByDate } from '../../utils/date';
 
@@ -64,7 +65,7 @@ const Expenses: React.FC = () => {
       <Amount route="/redespe" />
       <ul className="expenses-list">
         {account.data.map((expense: ExpensesProps, index: number) => (
-          <React.Fragment key={`despesa-${index}`}>
+          <React.Fragment key={v4()}>
             {account.data[index].bills.length > 0 && (
               <li className="expense-item">
                 <div className="expense-details">
@@ -119,7 +120,7 @@ const Expenses: React.FC = () => {
                 >
                   <ul className={`bills ${billsVisibility ? 'show' : ''}`}>
                     {sortDate(expense.bills).map((bill, i: number) => (
-                      <li className="bill" key={`bill-${i}`}>
+                      <li className="bill" key={v4()}>
                         <div className="bill-details">
                           {bill.installment.status && (
                             <span className="bill-installment">

@@ -1,5 +1,6 @@
 import React, { createContext, useCallback, useContext, useState } from 'react';
 import { AnimatePresence } from 'framer-motion';
+import { v4 } from 'uuid';
 
 import Popup from '../components/Popup/';
 
@@ -37,7 +38,7 @@ const PopupProvider: React.FC = ({ children }) => {
 
       {popup.length > 0 && (
         <AnimatePresence>
-          <Popup key="popup" {...popup[0]} />
+          <Popup key={v4()} {...popup[0]} />
         </AnimatePresence>
       )}
     </PopupContext.Provider>
