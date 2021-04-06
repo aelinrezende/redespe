@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 import { CgOptions } from 'react-icons/cg';
 import { motion } from 'framer-motion';
 

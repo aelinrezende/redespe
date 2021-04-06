@@ -1,7 +1,7 @@
 import React, { useState, useCallback, memo } from 'react';
 import AnimateHeight from 'react-animate-height';
 
-import { formatDate, sortByDate } from '../utils/date';
+import { formatDate, sortArrayOfObjByDate } from '../../utils/date';
 
 import Amount from '../../components/Amount';
 
@@ -53,7 +53,7 @@ const Expenses: React.FC = () => {
   );
 
   const sortDate = useCallback(
-    (a: string, b: string): number => sortByDate(a, b),
+    (array: any[]) => sortArrayOfObjByDate(array, 'reference'),
     [],
   );
 
@@ -118,36 +118,33 @@ const Expenses: React.FC = () => {
                   }
                 >
                   <ul className={`bills ${billsVisibility ? 'show' : ''}`}>
-                    {expense.bills
-                      .sort((a, b) => sortDate(a.reference, b.reference))
-                      .reverse()
-                      .map((bill, i: number) => (
-                        <li className="bill" key={`bill-${i}`}>
-                          <div className="bill-details">
-                            {bill.installment.status && (
-                              <span className="bill-installment">
-                                Acordo - Parcela
-                                {bill.installment.reference}
-                              </span>
-                            )}
-                            <span className="bill-date">
-                              {setDate(bill.reference)}
+                    {sortDate(expense.bills).map((bill, i: number) => (
+                      <li className="bill" key={`bill-${i}`}>
+                        <div className="bill-details">
+                          {bill.installment.status && (
+                            <span className="bill-installment">
+                              Acordo - Parcela
+                              {bill.installment.reference}
                             </span>
-                            <span className="bill-value">
-                              R$
-                              {bill.value.toLocaleString(undefined, {
-                                minimumFractionDigits: 2,
-                              })}
-                            </span>
-                          </div>
-                          <button
-                            className="btn"
-                            onClick={() => handleRemoveBill(index, i)}
-                          >
-                            <Coins />
-                          </button>
-                        </li>
-                      ))}
+                          )}
+                          <span className="bill-date">
+                            {setDate(bill.reference)}
+                          </span>
+                          <span className="bill-value">
+                            R$
+                            {bill.value.toLocaleString(undefined, {
+                              minimumFractionDigits: 2,
+                            })}
+                          </span>
+                        </div>
+                        <button
+                          className="btn"
+                          onClick={() => handleRemoveBill(index, i)}
+                        >
+                          <Coins />
+                        </button>
+                      </li>
+                    ))}
                   </ul>
                 </AnimateHeight>
               </li>

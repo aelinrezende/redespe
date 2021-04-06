@@ -9,6 +9,8 @@ export const Overlay = styled(motion.div)`
 	height: 100%;
 	width: 100%;
 	background: rgb(0 0 0 / 60%);
+
+	opacity: 0;
 `;
 
 export const Container = styled(motion.div)`
@@ -20,6 +22,8 @@ export const Container = styled(motion.div)`
 	padding: 2rem;
 	border-radius: 10px;
 	box-shadow: 0 15px 20px -5px rgb(0 0 0 / 50%);
+
+	transform: scale(0.75);
 `;
 export const CrossIcon = styled(CgClose)`
 	position: absolute;

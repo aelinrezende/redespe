@@ -1,23 +1,5 @@
 import styled, { keyframes } from 'styled-components';
 
-const containerOpacityAnination = keyframes`
-  0% {
-    opacity: 0;
-  }
-  3% {
-    opacity: 0.2;
-  }
-  5% {
-    opacity: 0.5;
-  }
-  10%, 25%, 75% {
-    opacity: 0.8;
-  }
-  100% {
-    opacity: 1;
-  }
-`;
-
 const iconFlipAnimation = keyframes`
   0% {
     transform: rotate(180deg);

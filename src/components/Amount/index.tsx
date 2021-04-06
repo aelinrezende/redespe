@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { useState, useEffect, memo } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useExpense } from '../../hooks/expense';
@@ -12,7 +12,12 @@ interface ExpensesProps {
 }
 
 const Amount: React.FC<ExpensesProps> = props => {
-  const { account, totals, toggleAccount } = useExpense();
+  const { account, getTotal, toggleAccount } = useExpense();
+  const [total, setTotal] = useState(0);
+
+  useEffect(() => {
+    setTotal(getTotal());
+  }, [getTotal]);
 
   return (
     <div className="amount-container">
@@ -25,7 +30,7 @@ const Amount: React.FC<ExpensesProps> = props => {
         <div className="total-details">
           <span>
             R$
-            {totals.currentAccount.toLocaleString(undefined, {
+            {total.toLocaleString(undefined, {
               minimumFractionDigits: 2,
             })}
           </span>

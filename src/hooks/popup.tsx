@@ -1,4 +1,5 @@
 import React, { createContext, useCallback, useContext, useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 
 import Popup from '../components/Popup/';
 
@@ -34,9 +35,11 @@ const PopupProvider: React.FC = ({ children }) => {
     >
       {children}
 
-      {popup.map((props, i) => (
-        <Popup key={'popup-' + i} {...props} />
-      ))}
+      {popup.length > 0 && (
+        <AnimatePresence>
+          <Popup key="popup" {...popup[0]} />
+        </AnimatePresence>
+      )}
     </PopupContext.Provider>
   );
 };

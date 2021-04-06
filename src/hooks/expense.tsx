@@ -1,12 +1,8 @@
-import React, {
-  createContext,
-  useCallback,
-  useContext,
-  useEffect,
-  useState,
-} from 'react';
+import React, { createContext, useCallback, useContext, useState } from 'react';
 
 import staticData from '../data.json';
+
+import { sortArrayOfObjByDate } from '../utils/date';
 
 interface ExpenseContextData {
   account: AccountsProps;
@@ -14,7 +10,8 @@ interface ExpenseContextData {
   removeExpense(expenseIndex: number): void;
   removeBill(expenseIndex: number, billIndex: number): void;
   toggleAccount(): void;
-  totals: TotalsProps;
+  getTotal(): number;
+  getMonthlyValue(): number;
 }
 
 export interface AccountsProps {
@@ -62,35 +59,6 @@ const ExpenseProvider: React.FC = ({ children }) => {
   });
 
   const [currentAccount, setCurrentAccount] = useState<number>(0);
-  const [totals, setTotals] = useState<TotalsProps>({
-    currentAccount: 0,
-    monthly: 0,
-    full: 0,
-  });
-
-  useEffect(() => {
-    const total = {
-      currentAccount: 0,
-      monthly: 0,
-      full: 0,
-    };
-
-    accounts.forEach((account, accountIndex) => {
-      account.data.forEach(expense => {
-        if (expense.bills.length)
-          total.monthly += expense.bills[expense.bills.length - 1].value;
-
-        expense.bills.forEach(bill => {
-          total.full += bill.value;
-
-          if (currentAccount === accountIndex)
-            total.currentAccount += bill.value;
-        });
-      });
-    });
-
-    setTotals(total);
-  }, [accounts, setTotals, currentAccount]);
 
   const removeExpense = useCallback(
     (expenseIndex: number) => {
@@ -127,6 +95,30 @@ const ExpenseProvider: React.FC = ({ children }) => {
     }
   }, [accountsIDs, currentAccount]);
 
+  const getTotal = useCallback(() => {
+    let value: number = 0;
+
+    accounts[currentAccount].data.forEach(expense => {
+      expense.bills.forEach(bill => {
+        value += bill.value;
+      });
+    });
+
+    return value;
+  }, [accounts, currentAccount]);
+
+  const getMonthlyValue = useCallback(() => {
+    let value: number = 0;
+
+    accounts[currentAccount].data.forEach(expense => {
+      if (expense.bills.length) {
+        value += sortArrayOfObjByDate(expense.bills, 'reference')[0].value;
+      }
+    });
+
+    return value;
+  }, [accounts, currentAccount]);
+
   return (
     <ExpenseContext.Provider
       value={{
@@ -135,7 +127,8 @@ const ExpenseProvider: React.FC = ({ children }) => {
         removeBill,
         toggleAccount,
         currentAccount,
-        totals,
+        getTotal,
+        getMonthlyValue,
       }}
     >
       {children}
