@@ -36,11 +36,11 @@ const PopupProvider: React.FC = ({ children }) => {
     >
       {children}
 
-      {popup.length > 0 && (
-        <AnimatePresence>
-          <Popup key={v4()} {...popup[0]} />
-        </AnimatePresence>
-      )}
+      <AnimatePresence>
+        {popup.map(props => (
+          <Popup key={v4()} {...props} />
+        ))}
+      </AnimatePresence>
     </PopupContext.Provider>
   );
 };

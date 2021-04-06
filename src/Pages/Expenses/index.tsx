@@ -5,6 +5,7 @@ import { v4 } from 'uuid';
 import { formatDate, sortArrayOfObjByDate } from '../../utils/date';
 
 import Amount from '../../components/Amount';
+import Navbar from '../../components/Navbar/';
 
 import { useExpense, ExpensesProps, BillsProps } from '../../hooks/expense';
 
@@ -153,6 +154,7 @@ const Expenses: React.FC = () => {
           </React.Fragment>
         ))}
       </ul>
+      <Navbar />
     </main>
   );
 };

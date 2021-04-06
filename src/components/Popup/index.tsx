@@ -15,18 +15,18 @@ const Popup: React.FC<PopupProps> = ({ title, body, ...rest }) => {
 				key={v4()}
 				animate={overlay.visible}
 				exit={overlay.exit}
-				transition={{ duration: 0.1 }}
+				transition={{ duration: 0.3 }}
 				onClick={() => removePopup()}
 			/>
 
 			<Container
 				key={v4()}
+				initial={container.initial}
 				animate={container.visible}
 				exit={container.exit}
-				transition={{ duration: 0.5 }}
-				onClick={() => removePopup()}
+				transition={{ duration: 0.3 }}
 			>
-				<CrossIcon />
+				<CrossIcon onClick={() => removePopup()} />
 
 				<Content>
 					<h1>{title}</h1>

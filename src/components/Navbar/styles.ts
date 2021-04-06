@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import { CgOptions } from 'react-icons/cg';
 
 export const NavContainer = styled.nav`
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 
 	height: 5rem;
@@ -56,6 +56,7 @@ export const Option = styled(motion.li)`
 	color: #dedede;
 	background: #1c1f27;
 	box-shadow: 0 15px 11px -10px rgb(17 29 70);
+	cursor: pointer;
 
 	& + & {
 		margin-top: 1rem;

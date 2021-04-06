@@ -1,9 +1,8 @@
 export const nav = {
 	container: {
 		hidden: {
-			opacity: 0.5,
+			opacity: 0,
 			transition: {
-				delayChildren: 0.5,
 				staggerChildren: 0.1,
 			},
 			transitionEnd: {
@@ -18,7 +17,7 @@ export const nav = {
 		visible: { y: 0 },
 		hover: {
 			boxShadow: '0 16px 11px -10px rgb(6 11 29)',
-			scale: 1.1,
+			scale: 1.2,
 		},
 	},
 };

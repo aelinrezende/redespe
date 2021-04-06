@@ -1,12 +1,16 @@
 main {
   height: 100%;
   width: 100%;
+  overflow-y: auto;
+  position: relative;
+  padding-bottom: 7.5rem;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
   animation: bg 1s;
   animation-fill-mode: forwards;
-  overflow-y: auto;
 }
 
 .expenses-list {
@@ -46,10 +50,10 @@ main {
 
 .expense-provider {
   display: flex;
-  
+
   & img {
     width: 5rem;
-    margin-right: .8rem;
+    margin-right: 0.8rem;
   }
 
   & div p {
@@ -66,7 +70,7 @@ main {
   display: flex;
   justify-content: space-between;
   margin-top: 1.2rem;
-  
+
   & button {
     width: 49%;
     font-size: 1.8rem;
@@ -80,13 +84,13 @@ main {
     color: #53b4e2;
     border: 4px solid #53b4e2;
     border-radius: 10px;
-    transition: all .5s ease;
-    
+    transition: all 0.5s ease;
+
     & :hover {
       color: #fff;
       border: 4px solid #51c7ff;
       background-color: #51c7ff;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
     }
   }
 
@@ -95,12 +99,12 @@ main {
     background-color: #53b4e2;
     border: 4px solid #53b4e2;
     border-radius: 10px;
-    transition: all .5s ease;
+    transition: all 0.5s ease;
 
     &:hover {
       background-color: #468daf;
       border-color: #468daf;
-      transition: all .5s ease;
+      transition: all 0.5s ease;
     }
   }
 }
@@ -113,17 +117,17 @@ main {
   font-style: italic;
   color: #b9b9b9;
   cursor: pointer;
-  
+
   & svg {
     height: 1rem;
-    margin-left: .4rem;
-    margin-top: .2rem;
-    transition: transform .3s;
+    margin-left: 0.4rem;
+    margin-top: 0.2rem;
+    transition: transform 0.3s;
   }
 
   & svg.active-expense {
     transform: rotate(180deg);
-    transition: transform .3s;
+    transition: transform 0.3s;
   }
 
   & svg path {
@@ -167,7 +171,7 @@ main {
     font-weight: 700;
     color: #888585;
   }
-  
+
   & .bill-date {
     font-size: 1.4rem;
     color: #8a8685;
@@ -193,6 +197,6 @@ main {
     background: inherit;
   }
   to {
-    background: #CDD3D1;
+    background: #cdd3d1;
   }
 }

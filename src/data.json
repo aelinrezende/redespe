@@ -12,104 +12,128 @@
             "expire": "01/09/2019",
             "reference": "Oct, 2019",
             "value": 410.66,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/10/2019",
             "reference": "Sep, 2019",
             "value": 450.83,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/11/2019",
             "reference": "Nov, 2019",
             "value": 452.31,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/01/2020",
             "reference": "Jan, 2020",
             "value": 388.91,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/02/2020",
             "reference": "Feb, 2020",
             "value": 452.03,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/03/2020",
             "reference": "Mar, 2020",
             "value": 271.02,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/07/2020",
             "reference": "Jul, 2020",
             "value": 750.53,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/09/2020",
             "reference": "Sep, 2020",
-            "value": 111.70,
-            "installment": {
-              "status": false
-            }
+            "value": 111.7,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "01/10/2020",
+            "reference": "Oct, 2020",
+            "value": 108.15,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "01/11/2020",
+            "reference": "Nov, 2020",
+            "value": 80.32,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "01/01/2020",
+            "reference": "Dec, 2020",
+            "value": 128.25,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "01/02/2020",
+            "reference": "Jan, 2020",
+            "value": 123.92,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "01/03/2020",
+            "reference": "Fev, 2020",
+            "value": 181.83,
+            "installment": { "status": false }
           }
         ]
       },
       {
         "provider": "Sabesp",
-        "label": "Àgua",
+        "label": "água",
         "logo": "sabesp_logo",
         "bills": [
           {
-            "expire": "01/02/2020",
+            "expire": "20/02/2020",
             "reference": "Feb, 2020",
             "value": 83.81,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
-            "expire": "01/04/2020",
+            "expire": "27/04/2020",
             "reference": "Apr, 2020",
             "value": 105.24,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
-            "expire": "01/05/2020",
+            "expire": "26/05/2020",
             "reference": "May, 2020",
             "value": 154.69,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
-            "expire": "01/06/2020",
+            "expire": "25/06/2020",
             "reference": "Jun, 2020",
             "value": 105.24,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
+          },
+          {
+            "expire": "24/12/2020",
+            "reference": "Jun, 2020",
+            "value": 108.83,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "25/02/2021",
+            "reference": "Jun, 2020",
+            "value": 115.99,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "25/03/2021",
+            "reference": "Jun, 2020",
+            "value": 112.6,
+            "installment": { "status": false }
           }
         ]
       },
@@ -119,349 +143,193 @@
         "logo": "vivo_logo",
         "bills": [
           {
-            "expire": "15/02/2020",
-            "reference": "Sep, 2020",
-            "value": 215.20,
-            "installment": {
-              "status": false
-            }
+            "expire": "15/03/2020",
+            "reference": "Mar, 2020",
+            "value": 232.2,
+            "installment": { "status": false }
           }
         ]
       },
       {
-        "provider": "Casas Bahia",
-        "label": "Celular",
-        "logo": "casas_bahia_logo",
+        "provider": "Prefeitura",
+        "label": "Lixo",
+        "logo": "santana_logo",
         "bills": [
           {
-            "expire": "01/10/2020",
-            "reference": "oct, 2020",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "01/12/2020",
-            "reference": "Dec, 2020",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "01/11/2020",
-            "reference": "Nov, 2020",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "01/01/2021",
+            "expire": "30/01/2021",
             "reference": "Jan, 2021",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
+            "value": 264.8,
+            "installment": { "status": false }
           },
           {
-            "expire": "01/03/2021",
-            "reference": "Mar, 2021",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "01/02/2021",
+            "expire": "30/02/2021",
             "reference": "Feb, 2021",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
+            "value": 264.8,
+            "installment": { "status": false }
           },
           {
-            "expire": "01/04/2021",
+            "expire": "30/03/2021",
+            "reference": "Mar, 2021",
+            "value": 264.8,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "30/04/2021",
             "reference": "Apr, 2021",
-            "value": 186.61,
-            "installment": {
-              "status": false
-            }
+            "value": 264.8,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "30/05/2021",
+            "reference": "May, 2021",
+            "value": 264.8,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "30/06/2021",
+            "reference": "Jun, 2021",
+            "value": 264.8,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "30/07/2021",
+            "reference": "Jul, 2021",
+            "value": 264.8,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "30/08/2021",
+            "reference": "Aug, 2021",
+            "value": 264.8,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "30/09/2021",
+            "reference": "Sep, 2021",
+            "value": 264.8,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "30/10/2021",
+            "reference": "Oct, 2021",
+            "value": 264.8,
+            "installment": { "status": false }
           }
         ]
       }
     ]
   },
-
   {
     "id": "casa_02",
     "label": "Casa 02",
     "data": [
-      {
-        "provider": "Enel",
-        "label": "Luz",
-        "logo": "enel_logo",
-        "bills": [
-          {
-            "expire": "09/11/2020",
-            "reference": "Oct, 2020",
-            "value": 189.29,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "08/01/2019",
-            "reference": "Dec, 2018",
-            "value": 176.44,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "21/01/2019",
-            "reference": "Dec, 2018",
-            "value": 86.02,
-            "installment": {
-              "status": true,
-              "reference": 5
-            }
-          },
-          {
-            "expire": "08/02/2019",
-            "reference": "Jan, 2019",
-            "value": 245.83,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "19/02/2019",
-            "reference": "Dec, 2018",
-            "value": 86.02,
-            "installment": {
-              "status": true,
-              "reference": 4
-            }
-          },
-          {
-            "expire": "08/03/2019",
-            "reference": "Feb, 2019",
-            "value": 213.66,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "19/03/2019",
-            "reference": "Dec, 2018",
-            "value": 86.02,
-            "installment": {
-              "status": true,
-              "reference": 3
-            }
-          },
-          {
-            "expire": "08/04/2019",
-            "reference": "Mar, 2019",
-            "value": 15.35,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "22/04/2019",
-            "reference": "Dec, 2018",
-            "value": 86.02,
-            "installment": {
-              "status": true,
-              "reference": 2
-            }
-          },
-          {
-            "expire": "20/05/2019",
-            "reference": "Dec, 2018",
-            "value": 86.02,
-            "installment": {
-              "status": true,
-              "reference": 1
-            }
-          },
-          {
-            "expire": "10/08/2020",
-            "reference": "Jul, 2020",
-            "value": 40.72,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "08/09/2020",
-            "reference": "Aug, 2020",
-            "value": 35.92,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "08/10/2020",
-            "reference": "Sep, 2020",
-            "value": 136.91,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "08/12/2020",
-            "reference": "Nov, 2020",
-            "value": 180.68,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "08/01/2021",
-            "reference": "Dez, 2020",
-            "value": 124.07,
-            "installment": {
-              "status": false
-            }
-          },
-          {
-            "expire": "08/02/2021",
-            "reference": "Jan, 2021",
-            "value": 79.03,
-            "installment": {
-              "status": false
-            }
-          }
-        ]
-      },
+      { "provider": "Enel", "label": "Luz", "logo": "enel_logo", "bills": [] },
       {
         "provider": "Sabesp",
-        "label": "Àgua",
+        "label": "água",
         "logo": "sabesp_logo",
         "bills": [
+          {
+            "expire": "01/04/2021",
+            "reference": "Mar, 2020",
+            "value": 54.41,
+            "installment": { "status": false }
+          },
+          {
+            "expire": "01/03/2021",
+            "reference": "Feb, 2020",
+            "value": 54.41,
+            "installment": { "status": false }
+          },
           {
             "expire": "01/02/2021",
             "reference": "Jan, 2020",
             "value": 54.41,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/01/2021",
             "reference": "Dec, 2020",
             "value": 54.41,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/12/2020",
             "reference": "Nov, 2020",
             "value": 54.41,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/11/2020",
             "reference": "Oct, 2020",
             "value": 54.41,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/10/2020",
             "reference": "Sep, 2020",
             "value": 54.29,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/09/2020",
             "reference": "Aug, 2020",
             "value": 52.62,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/08/2020",
             "reference": "Jul, 2020",
             "value": 52.62,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/07/2020",
             "reference": "Jun, 2020",
             "value": 52.62,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/06/2020",
             "reference": "May, 2020",
             "value": 52.62,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/05/2020",
             "reference": "Apr, 2020",
             "value": 52.62,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/04/2020",
             "reference": "Mar, 2020",
             "value": 60.66,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/03/2020",
             "reference": "Feb, 2020",
-            "value": 258.40,
-            "installment": {
-              "status": false
-            }
+            "value": 258.4,
+            "installment": { "status": false }
           },
           {
             "expire": "01/02/2020",
             "reference": "Jan, 2020",
-            "value": 69.10,
-            "installment": {
-              "status": false
-            }
+            "value": 69.1,
+            "installment": { "status": false }
           },
           {
             "expire": "01/01/2020",
             "reference": "Dec, 2019",
             "value": 52.62,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           },
           {
             "expire": "01/12/2020",
             "reference": "Nov, 2019",
             "value": 134.02,
-            "installment": {
-              "status": false
-            }
+            "installment": { "status": false }
           }
         ]
       },
@@ -469,17 +337,13 @@
         "provider": "Vivo",
         "label": "Internet + Fixo",
         "logo": "vivo_logo",
-        "bills": [
-          
-        ]
+        "bills": []
       },
       {
         "provider": "Casas Bahia",
         "label": "Celular",
         "logo": "casas_bahia_logo",
-        "bills": [
-          
-        ]
+        "bills": []
       }
     ]
   }

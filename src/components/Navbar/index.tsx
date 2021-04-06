@@ -41,6 +41,7 @@ const Navbar: React.FC = () => {
 				<NavButton
 					whileHover={button.hover}
 					onClick={() => toggleOptionsVisibility()}
+					transition={{ duration: 0.3 }}
 				>
 					<OptionsIcon />
 					<OptionsContainer
@@ -50,15 +51,24 @@ const Navbar: React.FC = () => {
 					>
 						<Option
 							whileHover={nav.child.hover}
+							transition={{ duration: 0.3 }}
 							variants={nav.child}
 							onClick={() => addMonthlyValuePopup()}
 						>
 							Valor desse mês
 						</Option>
-						<Option whileHover={nav.child.hover} variants={nav.child}>
+						<Option
+							whileHover={nav.child.hover}
+							transition={{ duration: 0.3 }}
+							variants={nav.child}
+						>
 							Valor desse mês + comida + gás
 						</Option>
-						<Option whileHover={nav.child.hover} variants={nav.child}>
+						<Option
+							whileHover={nav.child.hover}
+							transition={{ duration: 0.3 }}
+							variants={nav.child}
+						>
 							Criar
 						</Option>
 					</OptionsContainer>
