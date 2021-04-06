@@ -3,7 +3,7 @@ import React, { useState, useCallback, useEffect, memo } from 'react';
 import { useExpense } from '../../hooks/expense';
 import { usePopup } from '../../hooks/popup';
 
-import { nav } from './motion.variants';
+import { nav, button } from './motion.variants';
 
 import {
 	NavContainer,
@@ -38,18 +38,29 @@ const Navbar: React.FC = () => {
 		<NavContainer>
 			<Nav>
 				<NavAnchor to="#" />
-				<NavButton onClick={() => toggleOptionsVisibility()}>
+				<NavButton
+					whileHover={button.hover}
+					onClick={() => toggleOptionsVisibility()}
+				>
 					<OptionsIcon />
 					<OptionsContainer
 						initial={false}
 						variants={nav.container}
 						animate={optionsVisible ? 'visible' : 'hidden'}
 					>
-						<Option variants={nav.child} onClick={() => addMonthlyValuePopup()}>
+						<Option
+							whileHover={nav.child.hover}
+							variants={nav.child}
+							onClick={() => addMonthlyValuePopup()}
+						>
 							Valor desse mês
 						</Option>
-						<Option variants={nav.child}>Valor desse mês + comida + gás</Option>
-						<Option variants={nav.child}>Criar</Option>
+						<Option whileHover={nav.child.hover} variants={nav.child}>
+							Valor desse mês + comida + gás
+						</Option>
+						<Option whileHover={nav.child.hover} variants={nav.child}>
+							Criar
+						</Option>
 					</OptionsContainer>
 				</NavButton>
 				<NavAnchor to="#" />

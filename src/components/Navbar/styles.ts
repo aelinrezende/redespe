@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { CgOptions } from 'react-icons/cg';
 import { motion } from 'framer-motion';
+
+import { CgOptions } from 'react-icons/cg';
 
 export const NavContainer = styled.nav`
 	position: absolute;
@@ -20,13 +21,21 @@ export const Nav = styled.div`
 	bottom: 75%;
 `;
 
-export const NavButton = styled.button`
+export const NavButton = styled(motion.button)`
 	position: relative;
 
 	width: 5rem;
 	height: 5rem;
-	border: 2px solid #000;
+	border: 0;
 	border-radius: 50%;
+	color: #dedede;
+	background: #1c1f27;
+	box-shadow: 0 15px 15px -10px rgb(0 0 0 / 85%);
+	font-size: 1.6rem;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 `;
 
 export const OptionsContainer = styled(motion.ul)`
@@ -36,13 +45,17 @@ export const OptionsContainer = styled(motion.ul)`
 	right: 50%;
 
 	width: 20rem;
-	margin-bottom: 1rem;
+	margin-bottom: 2rem;
 `;
 
 export const Option = styled(motion.li)`
-	border: 2px solid #dedede;
-	border-radius: 5px;
-	padding: 1rem;
+	display: inline-block;
+	border-radius: 10px;
+	margin: 0 auto;
+	padding: 1rem 2rem;
+	color: #dedede;
+	background: #1c1f27;
+	box-shadow: 0 15px 11px -10px rgb(17 29 70);
 
 	& + & {
 		margin-top: 1rem;
@@ -51,4 +64,6 @@ export const Option = styled(motion.li)`
 
 export const NavAnchor = styled(Link)``;
 
-export const OptionsIcon = styled(CgOptions)``;
+export const OptionsIcon = styled(CgOptions)`
+	font-size: 2.2rem;
+`;

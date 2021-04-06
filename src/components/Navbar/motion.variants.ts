@@ -1,10 +1,10 @@
 export const nav = {
 	container: {
 		hidden: {
-			opacity: 0,
+			opacity: 0.5,
 			transition: {
 				delayChildren: 0.5,
-				staggerChildren: 0.9,
+				staggerChildren: 0.1,
 			},
 			transitionEnd: {
 				display: 'none',
@@ -14,7 +14,17 @@ export const nav = {
 	},
 
 	child: {
-		hidden: { y: 30 },
+		hidden: { y: -30 },
 		visible: { y: 0 },
+		hover: {
+			boxShadow: '0 16px 11px -10px rgb(6 11 29)',
+			scale: 1.1,
+		},
+	},
+};
+
+export const button = {
+	hover: {
+		boxShadow: '0 18px 15px -10px rgb(0 0 0 / 100%)',
 	},
 };
