@@ -4,10 +4,11 @@ export const overlay = {
 };
 
 export const container = {
-	initial: { scale: 0.75 },
-	visible: { scale: 1 },
+	initial: { scale: 0.75, y: '50%' },
+	visible: { scale: 1, y: '50%' },
 	exit: {
 		scale: [1, 1.1],
 		opacity: 0,
+		y: '50%',
 	},
 };

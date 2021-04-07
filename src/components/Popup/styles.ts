@@ -14,7 +14,8 @@ export const Overlay = styled(motion.div)`
 `;
 
 export const Container = styled(motion.div)`
-	position: absolute;
+	position: fixed;
+	bottom: 50%;
 
 	min-width: 20rem;
 	max-width: 35rem;

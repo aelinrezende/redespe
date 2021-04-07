@@ -7,6 +7,7 @@ import { CgOptions } from 'react-icons/cg';
 export const NavContainer = styled.nav`
 	position: fixed;
 	bottom: 0;
+	left: 0;
 
 	height: 5rem;
 	width: 100%;
