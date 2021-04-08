@@ -8,7 +8,7 @@ interface ExpenseContextData {
   account: AccountsProps;
   currentAccount: number;
   removeExpense(expenseIndex: number): void;
-  removeBill(expenseIndex: number, billIndex: number): void;
+  removeBill(expenseIndex: number, billID: string): void;
   toggleAccount(): void;
   getTotal(): number;
   getMonthlyValue(): number;
@@ -28,6 +28,7 @@ export interface ExpensesProps {
 }
 
 export interface BillsProps {
+  id: string;
   expire: string;
   reference: string;
   value: number;
@@ -72,8 +73,11 @@ const ExpenseProvider: React.FC = ({ children }) => {
   );
 
   const removeBill = useCallback(
-    (expenseIndex: number, billIndex: number) => {
+    (expenseIndex: number, billID: string) => {
       const array = accounts;
+      const billIndex = accounts[currentAccount].data[
+        expenseIndex
+      ].bills.findIndex(bill => (bill.id = billID));
 
       array[currentAccount].data[expenseIndex].bills.splice(billIndex, 1);
 

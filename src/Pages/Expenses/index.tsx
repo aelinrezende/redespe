@@ -1,4 +1,4 @@
-import React, { useState, useCallback, memo } from 'react';
+import React, { useState, useCallback, useEffect, memo } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 import { RiHandCoinFill as PayIcon } from 'react-icons/ri';
@@ -9,7 +9,9 @@ import { formatDate, sortArrayOfObjByDate } from '../../utils/date';
 import Amount from '../../components/Amount';
 import Navbar from '../../components/Navbar/';
 
-import { useExpense, BillsProps } from '../../hooks/expense';
+import Bill from './children/Bill/';
+
+import { useExpense, BillsProps, AccountsProps } from '../../hooks/expense';
 
 import {
   Container,
@@ -22,12 +24,17 @@ import {
   EditIcon,
   MoreIcon,
   Bills,
-  Bill,
 } from './styles';
 
 const Expenses: React.FC = () => {
   const { account, removeBill, removeExpense } = useExpense();
   const [billsVisibility, setBillsVisibility] = useState<Array<string>>([]);
+
+  const [expenses, setExpenses] = useState<AccountsProps>(account);
+
+  useEffect(() => {
+    setExpenses(account);
+  }, [account]);
 
   const toggleBillsVisibility = useCallback(
     (id: string) => {
@@ -52,8 +59,8 @@ const Expenses: React.FC = () => {
   }, []);
 
   const handleRemoveBill = useCallback(
-    (expenseIndex: number, billIndex: number) => {
-      removeBill(expenseIndex, billIndex);
+    (expenseIndex: number, billID: string) => {
+      removeBill(expenseIndex, billID);
     },
     [removeBill],
   );
@@ -80,73 +87,57 @@ const Expenses: React.FC = () => {
     <Container>
       <Amount route="/redespe" />
       <ExpensesList>
-        {account.data.map(({ bills, label, provider }, expenseIndex) => (
-          <Expense key={label + provider}>
-            <ExpenseMain>
-              <ExpenseContent>
-                <div />
+        {expenses.data.map(({ bills, label, provider }, expenseIndex) => {
+          if (bills.length)
+            return (
+              <Expense key={label + provider + account.id}>
+                <ExpenseMain>
+                  <ExpenseContent>
+                    <div />
 
-                <div>
-                  <h2>{provider}</h2>
-                  <span>{label}</span>
-                </div>
+                    <div>
+                      <h2>{provider}</h2>
+                      <span>{label}</span>
+                    </div>
 
-                <p>R${getBillsTotal(bills)}</p>
-              </ExpenseContent>
+                    <p>R${getBillsTotal(bills)}</p>
+                  </ExpenseContent>
 
-              <ExpenseButtonsTop>
-                <a href="google.com">
-                  <EditIcon />
-                </a>
-                <button>
-                  <RemoveIcon
-                    onClick={() => handleRemoveExpense(expenseIndex)}
-                  />
-                </button>
-              </ExpenseButtonsTop>
+                  <ExpenseButtonsTop>
+                    <a href="google.com">
+                      <EditIcon />
+                    </a>
+                    <button>
+                      <RemoveIcon
+                        onClick={() => handleRemoveExpense(expenseIndex)}
+                      />
+                    </button>
+                  </ExpenseButtonsTop>
 
-              <MoreIcon onClick={() => toggleBillsVisibility(provider)} />
-            </ExpenseMain>
-            <Bills
-              variants={billsVariants.container}
-              initial={false}
-              transition={{ duration: 0.3 }}
-              animate={
-                billsVisibility.includes(provider) ? 'visible' : 'hidden'
-              }
-            >
-              <AnimatePresence>
-                {sortDate(bills).map(
-                  ({ expire, installment, reference, value }, billIndex) => (
-                    <Bill
-                      variants={billsVariants.child}
-                      transition={{ duration: 0.3 }}
-                      whileHover={billsVariants.child.hover}
-                      exit={billsVariants.child.exit}
-                      key={reference + value + expire}
-                    >
-                      <div>
-                        <span>
-                          {setDate(reference)}{' '}
-                          {installment.status &&
-                            ' | Parcela ' + installment.reference}
-                        </span>
-                        <p>R${formatNumberToCurrency(value)}</p>
-                      </div>
-                      <button
-                        onClick={() =>
-                          handleRemoveBill(expenseIndex, billIndex)
-                        }
-                      >
-                        <PayIcon />
-                      </button>
-                    </Bill>
-                  ),
-                )}
-              </AnimatePresence>
-            </Bills>
-          </Expense>
-        ))}
+                  <MoreIcon onClick={() => toggleBillsVisibility(provider)} />
+                </ExpenseMain>
+                <Bills
+                  variants={billsVariants.container}
+                  initial={false}
+                  transition={{ duration: 0.3 }}
+                  animate={
+                    billsVisibility.includes(provider) ? 'visible' : 'hidden'
+                  }
+                >
+                  <AnimatePresence>
+                    {sortDate(bills).map((billProps: BillsProps) => (
+                      <Bill
+                        key={billProps.id}
+                        {...billProps}
+                        expenseIndex={expenseIndex}
+                        removeBill={handleRemoveBill}
+                      />
+                    ))}
+                  </AnimatePresence>
+                </Bills>
+              </Expense>
+            );
+        })}
       </ExpensesList>
       <Navbar />
     </Container>

@@ -9,78 +9,91 @@
         "logo": "enel_logo",
         "bills": [
           {
+            "id": "b6a46na46vtaw46b4",
             "expire": "01/09/2019",
             "reference": "Oct, 2019",
             "value": 410.66,
             "installment": { "status": false }
           },
           {
+            "id": "6b467msa46v456",
             "expire": "01/10/2019",
             "reference": "Sep, 2019",
             "value": 450.83,
             "installment": { "status": false }
           },
           {
+            "id": "b6a4n46av634",
             "expire": "01/11/2019",
             "reference": "Nov, 2019",
             "value": 452.31,
             "installment": { "status": false }
           },
           {
+            "id": "b64ama4ertvewra",
             "expire": "01/01/2020",
             "reference": "Jan, 2020",
             "value": 388.91,
             "installment": { "status": false }
           },
           {
+            "id": "b6sae46mas46ba4",
             "expire": "01/02/2020",
             "reference": "Feb, 2020",
             "value": 452.03,
             "installment": { "status": false }
           },
           {
+            "id": "bys5msybse",
             "expire": "01/03/2020",
             "reference": "Mar, 2020",
             "value": 271.02,
             "installment": { "status": false }
           },
           {
+            "id": "b4a6am4aretv4",
             "expire": "01/07/2020",
             "reference": "Jul, 2020",
             "value": 750.53,
             "installment": { "status": false }
           },
           {
+            "id": "b4a64abtn4",
             "expire": "01/09/2020",
             "reference": "Sep, 2020",
             "value": 111.7,
             "installment": { "status": false }
           },
           {
+            "id": "5b4w5b4a5be6n",
             "expire": "01/10/2020",
             "reference": "Oct, 2020",
             "value": 108.15,
             "installment": { "status": false }
           },
           {
+            "id": "5b3w4a56n4643ab",
             "expire": "01/11/2020",
             "reference": "Nov, 2020",
             "value": 80.32,
             "installment": { "status": false }
           },
           {
+            "id": "4356wtnwatvawet",
             "expire": "01/01/2020",
             "reference": "Dec, 2020",
             "value": 128.25,
             "installment": { "status": false }
           },
           {
+            "id": "646n4i9769na4",
             "expire": "01/02/2020",
             "reference": "Jan, 2020",
             "value": 123.92,
             "installment": { "status": false }
           },
           {
+            "id": "b547m54w4yasz",
             "expire": "01/03/2020",
             "reference": "Fev, 2020",
             "value": 181.83,
@@ -94,42 +107,49 @@
         "logo": "sabesp_logo",
         "bills": [
           {
+            "id": "bwe5abwa5bwe5",
             "expire": "20/02/2020",
             "reference": "Feb, 2020",
             "value": 83.81,
             "installment": { "status": false }
           },
           {
+            "id": "awb5w35bwa5a3w5maw35bwa5ba",
             "expire": "27/04/2020",
             "reference": "Apr, 2020",
             "value": 105.24,
             "installment": { "status": false }
           },
           {
+            "id": "5nwa363w56wna564,atawb35",
             "expire": "26/05/2020",
             "reference": "May, 2020",
             "value": 154.69,
             "installment": { "status": false }
           },
           {
+            "id": "b5w3e35njw3ae5aw35w",
             "expire": "25/06/2020",
             "reference": "Jun, 2020",
             "value": 105.24,
             "installment": { "status": false }
           },
           {
+            "id": "b53we5bw46mwesa",
             "expire": "24/12/2020",
             "reference": "Jun, 2020",
             "value": 108.83,
             "installment": { "status": false }
           },
           {
+            "id": "b5wnjwa56waen",
             "expire": "25/02/2021",
             "reference": "Jun, 2020",
             "value": 115.99,
             "installment": { "status": false }
           },
           {
+            "id": "5bwe35mw35abwe",
             "expire": "25/03/2021",
             "reference": "Jun, 2020",
             "value": 112.6,
@@ -143,6 +163,7 @@
         "logo": "vivo_logo",
         "bills": [
           {
+            "id": "5b3w564mw6atbwr",
             "expire": "15/03/2020",
             "reference": "Mar, 2020",
             "value": 232.2,
@@ -156,60 +177,70 @@
         "logo": "santana_logo",
         "bills": [
           {
+            "id": "we5bw3e5bawe45nw",
             "expire": "30/01/2021",
             "reference": "Jan, 2021",
             "value": 264.8,
             "installment": { "status": false }
           },
           {
+            "id": "bwe5nw446nj4ew5nw4",
             "expire": "30/02/2021",
             "reference": "Feb, 2021",
             "value": 264.8,
             "installment": { "status": false }
           },
           {
+            "id": "v3we5nurtbwe",
             "expire": "30/03/2021",
             "reference": "Mar, 2021",
             "value": 264.8,
             "installment": { "status": false }
           },
           {
+            "id": "vqw43wbh6y5nje",
             "expire": "30/04/2021",
             "reference": "Apr, 2021",
             "value": 264.8,
             "installment": { "status": false }
           },
           {
+            "id": "vqw4bqw4bq34qc",
             "expire": "30/05/2021",
             "reference": "May, 2021",
             "value": 264.8,
             "installment": { "status": false }
           },
           {
+            "id": "vqw44rwb5bq2",
             "expire": "30/06/2021",
             "reference": "Jun, 2021",
             "value": 264.8,
             "installment": { "status": false }
           },
           {
+            "id": "wev5rw3t5n4wn5",
             "expire": "30/07/2021",
             "reference": "Jul, 2021",
             "value": 264.8,
             "installment": { "status": false }
           },
           {
+            "id": "qvw4qw4vbqvw4q",
             "expire": "30/08/2021",
             "reference": "Aug, 2021",
             "value": 264.8,
             "installment": { "status": false }
           },
           {
+            "id": "vqw4vqw4vqw4vqw4",
             "expire": "30/09/2021",
             "reference": "Sep, 2021",
             "value": 264.8,
             "installment": { "status": false }
           },
           {
+            "id": "v34v3q4qv224qw",
             "expire": "30/10/2021",
             "reference": "Oct, 2021",
             "value": 264.8,
@@ -230,102 +261,119 @@
         "logo": "sabesp_logo",
         "bills": [
           {
+            "id": "b53w5bu5r",
             "expire": "01/04/2021",
             "reference": "Mar, 2020",
             "value": 54.41,
             "installment": { "status": false }
           },
           {
+            "id": "v43wb4wtn4",
             "expire": "01/03/2021",
             "reference": "Feb, 2020",
             "value": 54.41,
             "installment": { "status": false }
           },
           {
+            "id": "awv4wa4vwa",
             "expire": "01/02/2021",
             "reference": "Jan, 2020",
             "value": 54.41,
             "installment": { "status": false }
           },
           {
+            "id": "b5456n46n46n46",
             "expire": "01/01/2021",
             "reference": "Dec, 2020",
             "value": 54.41,
             "installment": { "status": false }
           },
           {
+            "id": "5b345rbey5n5",
             "expire": "01/12/2020",
             "reference": "Nov, 2020",
             "value": 54.41,
             "installment": { "status": false }
           },
           {
+            "id": "tur5rtmyu545",
             "expire": "01/11/2020",
             "reference": "Oct, 2020",
             "value": 54.41,
             "installment": { "status": false }
           },
           {
+            "id": "6ba46ba46a46b",
             "expire": "01/10/2020",
             "reference": "Sep, 2020",
             "value": 54.29,
             "installment": { "status": false }
           },
           {
+            "id": "6bew464e6b4w",
             "expire": "01/09/2020",
             "reference": "Aug, 2020",
             "value": 52.62,
             "installment": { "status": false }
           },
           {
+            "id": "a646a5e6tane46",
             "expire": "01/08/2020",
             "reference": "Jul, 2020",
             "value": 52.62,
             "installment": { "status": false }
           },
           {
+            "id": "an466nta4e6n",
             "expire": "01/07/2020",
             "reference": "Jun, 2020",
             "value": 52.62,
             "installment": { "status": false }
           },
           {
+            "id": "45hwa5bhw4a5h4jn4",
             "expire": "01/06/2020",
             "reference": "May, 2020",
             "value": 52.62,
             "installment": { "status": false }
           },
           {
+            "id": "aa4a5ertsgbew5",
             "expire": "01/05/2020",
             "reference": "Apr, 2020",
             "value": 52.62,
             "installment": { "status": false }
           },
           {
+            "id": "a646na4e46ter",
             "expire": "01/04/2020",
             "reference": "Mar, 2020",
             "value": 60.66,
             "installment": { "status": false }
           },
           {
+            "id": "an64n646na4",
             "expire": "01/03/2020",
             "reference": "Feb, 2020",
             "value": 258.4,
             "installment": { "status": false }
           },
           {
+            "id": "bi6n4an4a6ll",
             "expire": "01/02/2020",
             "reference": "Jan, 2020",
             "value": 69.1,
             "installment": { "status": false }
           },
           {
+            "id": "bilx5n4a564n6l",
             "expire": "01/01/2020",
             "reference": "Dec, 2019",
             "value": 52.62,
             "installment": { "status": false }
           },
           {
+            "id": "exqweqxwe",
             "expire": "01/12/2020",
             "reference": "Nov, 2019",
             "value": 134.02,
