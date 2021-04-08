@@ -7,8 +7,8 @@ import Expenses from './pages/Expenses/';
 function Routes() {
 	return (
 		<BrowserRouter>
-			<Route path="/redespe" exact component={Total} />
-			<Route path="/redespe/expenses" component={Expenses} />
+			<Route path="/" exact component={Total} />
+			<Route path="/expenses" component={Expenses} />
 		</BrowserRouter>
 	);
 }
