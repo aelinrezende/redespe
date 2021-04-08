@@ -137,21 +137,21 @@
           {
             "id": "b53we5bw46mwesa",
             "expire": "24/12/2020",
-            "reference": "Jun, 2020",
+            "reference": "Dez, 2020",
             "value": 108.83,
             "installment": { "status": false }
           },
           {
             "id": "b5wnjwa56waen",
             "expire": "25/02/2021",
-            "reference": "Jun, 2020",
+            "reference": "Feb, 2021",
             "value": 115.99,
             "installment": { "status": false }
           },
           {
             "id": "5bwe35mw35abwe",
             "expire": "25/03/2021",
-            "reference": "Jun, 2020",
+            "reference": "Mar, 2021",
             "value": 112.6,
             "installment": { "status": false }
           }
@@ -257,7 +257,7 @@
       { "provider": "Enel", "label": "Luz", "logo": "enel_logo", "bills": [] },
       {
         "provider": "Sabesp",
-        "label": "água",
+        "label": "Água",
         "logo": "sabesp_logo",
         "bills": [
           {

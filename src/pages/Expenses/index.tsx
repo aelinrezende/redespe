@@ -1,17 +1,15 @@
-import React, { useState, useCallback, useEffect, memo } from 'react';
+import React, { useState, useCallback, memo, Fragment } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
-import { RiHandCoinFill as PayIcon } from 'react-icons/ri';
-
 import { bills as billsVariants } from './motion.variants';
-import { formatDate, sortArrayOfObjByDate } from '../../utils/date';
+import { sortArrayOfObjByDate } from '../../utils/date';
 
 import Amount from '../../components/Amount';
 import Navbar from '../../components/Navbar/';
 
 import Bill from './children/Bill/';
 
-import { useExpense, BillsProps, AccountsProps } from '../../hooks/expense';
+import { useExpense, BillsProps } from '../../hooks/expense';
 
 import {
   Container,
@@ -29,12 +27,6 @@ import {
 const Expenses: React.FC = () => {
   const { account, removeBill, removeExpense } = useExpense();
   const [billsVisibility, setBillsVisibility] = useState<Array<string>>([]);
-
-  const [expenses, setExpenses] = useState<AccountsProps>(account);
-
-  useEffect(() => {
-    setExpenses(account);
-  }, [account]);
 
   const toggleBillsVisibility = useCallback(
     (id: string) => {
@@ -72,24 +64,18 @@ const Expenses: React.FC = () => {
     [removeExpense],
   );
 
-  const formatNumberToCurrency = useCallback(number => {
-    return number.toLocaleString(undefined, { minimumFractionDigits: 2 });
-  }, []);
-
   const sortDate = useCallback(
     (array: any[]) => sortArrayOfObjByDate(array, 'reference'),
     [],
   );
 
-  const setDate = useCallback((date: string): string => formatDate(date), []);
-
   return (
     <Container>
       <Amount route="/redespe" />
       <ExpensesList>
-        {expenses.data.map(({ bills, label, provider }, expenseIndex) => {
-          if (bills.length)
-            return (
+        {account.data?.map(({ bills, label, provider }, expenseIndex) => (
+          <Fragment key={label + account.id}>
+            {bills.length > 0 && (
               <Expense key={label + provider + account.id}>
                 <ExpenseMain>
                   <ExpenseContent>
@@ -114,30 +100,34 @@ const Expenses: React.FC = () => {
                     </button>
                   </ExpenseButtonsTop>
 
-                  <MoreIcon onClick={() => toggleBillsVisibility(provider)} />
+                  <MoreIcon
+                    onClick={() => toggleBillsVisibility(provider + account.id)}
+                  />
                 </ExpenseMain>
-                <Bills
-                  variants={billsVariants.container}
-                  initial={false}
-                  transition={{ duration: 0.3 }}
-                  animate={
-                    billsVisibility.includes(provider) ? 'visible' : 'hidden'
-                  }
-                >
-                  <AnimatePresence>
-                    {sortDate(bills).map((billProps: BillsProps) => (
-                      <Bill
-                        key={billProps.id}
-                        {...billProps}
-                        expenseIndex={expenseIndex}
-                        removeBill={handleRemoveBill}
-                      />
-                    ))}
-                  </AnimatePresence>
-                </Bills>
+                <AnimatePresence>
+                  {billsVisibility.includes(provider + account.id) && (
+                    <Bills
+                      key={account.id + provider}
+                      initial={billsVariants.container.initial}
+                      animate={billsVariants.container.visible}
+                      exit={billsVariants.container.exit}
+                      transition={{ duration: 0.3 }}
+                    >
+                      {sortDate(bills).map((billProps: BillsProps, billID) => (
+                        <Bill
+                          key={billProps.id}
+                          {...billProps}
+                          removeBill={handleRemoveBill}
+                          expenseIndex={expenseIndex}
+                        />
+                      ))}
+                    </Bills>
+                  )}
+                </AnimatePresence>
               </Expense>
-            );
-        })}
+            )}
+          </Fragment>
+        ))}
       </ExpensesList>
       <Navbar />
     </Container>

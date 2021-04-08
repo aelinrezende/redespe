@@ -60,6 +60,9 @@ const ExpenseProvider: React.FC = ({ children }) => {
   });
 
   const [currentAccount, setCurrentAccount] = useState<number>(0);
+  const [account, setAccount] = useState<AccountsProps>(
+    accounts[currentAccount],
+  );
 
   const removeExpense = useCallback(
     (expenseIndex: number) => {
@@ -74,16 +77,16 @@ const ExpenseProvider: React.FC = ({ children }) => {
 
   const removeBill = useCallback(
     (expenseIndex: number, billID: string) => {
-      const array = accounts;
-      const billIndex = accounts[currentAccount].data[
-        expenseIndex
-      ].bills.findIndex(bill => (bill.id = billID));
+      const obj = account;
+      const billIndex = account.data[expenseIndex].bills.findIndex(
+        bill => (bill.id = billID),
+      );
 
-      array[currentAccount].data[expenseIndex].bills.splice(billIndex, 1);
+      obj.data[expenseIndex].bills.splice(billIndex, 1);
 
-      setAccounts([...array]);
+      setAccount({ ...obj });
     },
-    [accounts, currentAccount],
+    [account],
   );
 
   const toggleAccount = useCallback(() => {
@@ -94,22 +97,24 @@ const ExpenseProvider: React.FC = ({ children }) => {
       accountsIDs.length === 1
     ) {
       setCurrentAccount(accountsIDs[0]);
+      setAccount(accounts[currentAccount]);
     } else {
       setCurrentAccount(accountsIDs[currentAccountIndex + 1]);
+      setAccount(accounts[currentAccount]);
     }
-  }, [accountsIDs, currentAccount]);
+  }, [accountsIDs, currentAccount, accounts]);
 
   const getTotal = useCallback(() => {
     let value: number = 0;
 
-    accounts[currentAccount].data.forEach(expense => {
+    account.data.forEach(expense => {
       expense.bills.forEach(bill => {
         value += bill.value;
       });
     });
 
     return value;
-  }, [accounts, currentAccount]);
+  }, [account]);
 
   const getMonthlyValue = useCallback(() => {
     let value: number = 0;
@@ -126,7 +131,7 @@ const ExpenseProvider: React.FC = ({ children }) => {
   return (
     <ExpenseContext.Provider
       value={{
-        account: accounts[currentAccount],
+        account,
         removeExpense,
         removeBill,
         toggleAccount,

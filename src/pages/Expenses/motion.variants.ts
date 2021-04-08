@@ -1,16 +1,14 @@
 export const bills = {
 	container: {
-		initial: {
-			display: 'none',
-		},
-		hidden: {
+		initial: { display: 'block', height: 0, opacity: 0 },
+		visible: { display: 'block', height: 'auto', opacity: 1 },
+		exit: {
 			height: 0,
 			opacity: 0,
 			transitionEnd: {
 				display: 'none',
 			},
 		},
-		visible: { display: 'block', height: 'auto', opacity: 1 },
 	},
 	child: {
 		hidden: {

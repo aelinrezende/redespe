@@ -1,4 +1,4 @@
-import React, { useState, useEffect, memo } from 'react';
+import React, { useState, memo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useExpense } from '../../hooks/expense';
@@ -11,9 +11,9 @@ interface ExpensesProps {
   route: string;
 }
 
-const Amount: React.FC<ExpensesProps> = props => {
-  const { account, getTotal, toggleAccount } = useExpense();
-  const [total, setTotal] = useState(0);
+const Amount: React.FC<ExpensesProps> = ({ route }) => {
+  const { account, toggleAccount, getTotal } = useExpense();
+  const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {
     setTotal(getTotal());
@@ -30,16 +30,14 @@ const Amount: React.FC<ExpensesProps> = props => {
         <div className="total-details">
           <span>
             R$
-            {total.toLocaleString(undefined, {
+            {total?.toLocaleString(undefined, {
               minimumFractionDigits: 2,
             })}
           </span>
-          <Link to={`${props.route}`}>
+          <Link to={`${route}`}>
             <ArrowDownIcon
               className={
-                props.route !== '/redespe'
-                  ? 'total-home-arrow'
-                  : 'total-rotate-arrow'
+                route !== '/redespe' ? 'total-home-arrow' : 'total-rotate-arrow'
               }
             />
           </Link>

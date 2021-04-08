@@ -2,15 +2,15 @@ import React, { memo, useCallback } from 'react';
 
 import { RiHandCoinFill as PayIcon } from 'react-icons/ri';
 
-import { formatDate, sortArrayOfObjByDate } from '../../../../utils/date';
-import { useExpense, BillsProps } from '../../../../hooks/expense';
+import { formatDate } from '../../../../utils/date';
+import { BillsProps } from '../../../../hooks/expense';
 import { bills as billsVariants } from '../../motion.variants';
 
 import { Container } from './styles';
 
 interface BillProps extends BillsProps {
-	expenseIndex: number;
 	removeBill(expenseIndex: number, billID: string): void;
+	expenseIndex: number;
 }
 
 const Bill: React.FC<BillProps> = ({
@@ -19,16 +19,14 @@ const Bill: React.FC<BillProps> = ({
 	reference,
 	expire,
 	id,
-	expenseIndex,
 	removeBill,
+	expenseIndex,
 }) => {
-	const { account, removeExpense } = useExpense();
-
 	const handleRemoveBill = useCallback(
-		(expenseIndex: number, billID: string) => {
-			removeBill(expenseIndex, billID);
+		(expenseIndex: number, billID: string, value: number) => {
+			removeBill(expenseIndex, id);
 		},
-		[removeBill],
+		[removeBill, id],
 	);
 
 	const formatNumberToCurrency = useCallback(number => {
@@ -42,7 +40,6 @@ const Bill: React.FC<BillProps> = ({
 			variants={billsVariants.child}
 			transition={{ duration: 0.3 }}
 			whileHover={billsVariants.child.hover}
-			exit={billsVariants.child.exit}
 			key={reference + value + expire}
 		>
 			<div>
@@ -52,7 +49,7 @@ const Bill: React.FC<BillProps> = ({
 				</span>
 				<p>R${formatNumberToCurrency(value)}</p>
 			</div>
-			<button onClick={() => handleRemoveBill(expenseIndex, id)}>
+			<button onClick={() => handleRemoveBill(expenseIndex, id, value)}>
 				<PayIcon />
 			</button>
 		</Container>
