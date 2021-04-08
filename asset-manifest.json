@@ -1,31 +1,24 @@
 {
   "files": {
-    "main.css": "/redespe/static/css/main.5c69bf94.chunk.css",
-    "main.js": "/redespe/static/js/main.7cf132fb.chunk.js",
-    "main.js.map": "/redespe/static/js/main.7cf132fb.chunk.js.map",
+    "main.css": "/redespe/static/css/main.c37d0f48.chunk.css",
+    "main.js": "/redespe/static/js/main.2c421117.chunk.js",
+    "main.js.map": "/redespe/static/js/main.2c421117.chunk.js.map",
     "runtime-main.js": "/redespe/static/js/runtime-main.2e392b61.js",
     "runtime-main.js.map": "/redespe/static/js/runtime-main.2e392b61.js.map",
-    "static/js/2.afbe7a7c.chunk.js": "/redespe/static/js/2.afbe7a7c.chunk.js",
-    "static/js/2.afbe7a7c.chunk.js.map": "/redespe/static/js/2.afbe7a7c.chunk.js.map",
+    "static/js/2.4f37e026.chunk.js": "/redespe/static/js/2.4f37e026.chunk.js",
+    "static/js/2.4f37e026.chunk.js.map": "/redespe/static/js/2.4f37e026.chunk.js.map",
     "index.html": "/redespe/index.html",
-    "precache-manifest.ebf9ad512b6d1d7aca2bf648c02f71bf.js": "/redespe/precache-manifest.ebf9ad512b6d1d7aca2bf648c02f71bf.js",
+    "precache-manifest.2506bc01bcfcdddc2c95c623b7171b06.js": "/redespe/precache-manifest.2506bc01bcfcdddc2c95c623b7171b06.js",
     "service-worker.js": "/redespe/service-worker.js",
-    "static/css/main.5c69bf94.chunk.css.map": "/redespe/static/css/main.5c69bf94.chunk.css.map",
-    "static/js/2.afbe7a7c.chunk.js.LICENSE.txt": "/redespe/static/js/2.afbe7a7c.chunk.js.LICENSE.txt",
-    "static/media/arrow.svg": "/redespe/static/media/arrow.9c1424d6.svg",
-    "static/media/arrow_down.svg": "/redespe/static/media/arrow_down.2c37dfad.svg",
-    "static/media/casas_bahia_logo.svg": "/redespe/static/media/casas_bahia_logo.685ef0f4.svg",
-    "static/media/coins.svg": "/redespe/static/media/coins.205a2d55.svg",
-    "static/media/enel_logo.svg": "/redespe/static/media/enel_logo.4c30b3a2.svg",
-    "static/media/sabesp_logo.svg": "/redespe/static/media/sabesp_logo.8fdb491b.svg",
-    "static/media/santana_logo.svg": "/redespe/static/media/santana_logo.3f093816.svg",
-    "static/media/toggle.svg": "/redespe/static/media/toggle.654ad98d.svg",
-    "static/media/vivo_logo.svg": "/redespe/static/media/vivo_logo.a1b563b2.svg"
+    "static/css/main.c37d0f48.chunk.css.map": "/redespe/static/css/main.c37d0f48.chunk.css.map",
+    "static/js/2.4f37e026.chunk.js.LICENSE.txt": "/redespe/static/js/2.4f37e026.chunk.js.LICENSE.txt",
+    "static/media/arrow.50aa945b.svg": "/redespe/static/media/arrow.50aa945b.svg",
+    "static/media/toggle.654ad98d.svg": "/redespe/static/media/toggle.654ad98d.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.2e392b61.js",
-    "static/js/2.afbe7a7c.chunk.js",
-    "static/css/main.5c69bf94.chunk.css",
-    "static/js/main.7cf132fb.chunk.js"
+    "static/js/2.4f37e026.chunk.js",
+    "static/css/main.c37d0f48.chunk.css",
+    "static/js/main.2c421117.chunk.js"
   ]
 }
