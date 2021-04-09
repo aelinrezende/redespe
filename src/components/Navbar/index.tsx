@@ -70,7 +70,7 @@ const Navbar: React.FC = () => {
 							variants={nav.child}
 							onClick={() => addMonthlyAndExtraValuePopup()}
 						>
-							Valor das contas desse mês + comida + gás
+							Contas deste mês + comida + gás
 						</Option>
 						<Option
 							whileHover={nav.child.hover}

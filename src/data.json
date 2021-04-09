@@ -254,7 +254,20 @@
     "id": "casa_02",
     "label": "Casa 02",
     "data": [
-      { "provider": "Enel", "label": "Luz", "logo": "enel_logo", "bills": [] },
+      {
+        "provider": "Enel",
+        "label": "Luz",
+        "logo": "enel_logo",
+        "bills": [
+          {
+            "id": "b53w5bu5r",
+            "expire": "05/04/2021",
+            "reference": "Mar, 2021",
+            "value": 99.59,
+            "installment": { "status": false }
+          }
+        ]
+      },
       {
         "provider": "Sabesp",
         "label": "Água",
