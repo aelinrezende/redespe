@@ -34,6 +34,13 @@ const Navbar: React.FC = () => {
 		addPopup('Valor Mensal', 'R$' + monthlyValue.toFixed(2));
 	}, [addPopup, monthlyValue]);
 
+	const addMonthlyAndExtraValuePopup = useCallback(() => {
+		addPopup(
+			'Valor das Contas + Gás + Comida',
+			'R$' + (monthlyValue + 100 + 550).toFixed(2),
+		);
+	}, [addPopup, monthlyValue]);
+
 	return (
 		<NavContainer>
 			<Nav>
@@ -61,8 +68,9 @@ const Navbar: React.FC = () => {
 							whileHover={nav.child.hover}
 							transition={{ duration: 0.3 }}
 							variants={nav.child}
+							onClick={() => addMonthlyAndExtraValuePopup()}
 						>
-							Valor desse mês + comida + gás
+							Valor das contas desse mês + comida + gás
 						</Option>
 						<Option
 							whileHover={nav.child.hover}
