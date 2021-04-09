@@ -18,6 +18,7 @@ const expensesUp = keyframes`
 
 export const Container = styled.main`
   position: relative;
+  min-height: 100vh;
   height: 100%;
   max-width: 40rem;
   width: 100%;

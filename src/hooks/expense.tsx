@@ -66,13 +66,13 @@ const ExpenseProvider: React.FC = ({ children }) => {
 
   const removeExpense = useCallback(
     (expenseIndex: number) => {
-      const array = accounts;
+      const array = account;
 
-      array[currentAccount].data.splice(expenseIndex, 1);
+      array.data.splice(expenseIndex, 1);
 
-      setAccounts([...array]);
+      setAccount({ ...array });
     },
-    [accounts, currentAccount],
+    [account],
   );
 
   const removeBill = useCallback(
