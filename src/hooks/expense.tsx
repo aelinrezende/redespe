@@ -119,14 +119,14 @@ const ExpenseProvider: React.FC = ({ children }) => {
   const getMonthlyValue = useCallback(() => {
     let value: number = 0;
 
-    accounts[currentAccount].data.forEach(expense => {
+    account.data.forEach(expense => {
       if (expense.bills.length) {
         value += sortArrayOfObjByDate(expense.bills, 'reference')[0].value;
       }
     });
 
     return value;
-  }, [accounts, currentAccount]);
+  }, [account]);
 
   return (
     <ExpenseContext.Provider
