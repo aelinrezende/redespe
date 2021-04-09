@@ -8,7 +8,7 @@ import { Container } from './styles';
 const Total: React.FC = () => {
 	return (
 		<Container>
-			<Amount route="/redespe/expenses" />
+			<Amount route="/expenses" />
 			<Navbar />
 		</Container>
 	);

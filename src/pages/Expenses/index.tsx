@@ -71,7 +71,7 @@ const Expenses: React.FC = () => {
 
   return (
     <Container>
-      <Amount route="/redespe" />
+      <Amount route="/" />
       <ExpensesList>
         {account.data?.map(({ bills, label, provider }, expenseIndex) => (
           <Fragment key={label + account.id}>
