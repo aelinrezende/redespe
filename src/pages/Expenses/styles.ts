@@ -87,7 +87,7 @@ export const ExpenseMain = styled.div`
   box-shadow: 10px 10px 20px #cbced1, -10px -10px 20px #ffffff;
   cursor: pointer;
 
-  transition: border 0.5s ease-in-out;
+  transition: border 0.3s;
 
   &:hover {
     border: 4px solid #4d3645;
@@ -105,7 +105,7 @@ export const ExpenseButtonsTop = styled.div`
   opacity: 0;
   visibility: hidden;
 
-  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+  transition: opacity 0.3s, visibility 0.3s;
 
   ${ExpenseMain}:hover & {
     opacity: 1;
