@@ -17,7 +17,7 @@ export const nav = {
 		visible: { y: 0 },
 		hover: {
 			boxShadow: '0 16px 11px -10px rgb(6 11 29)',
-			scale: 1.2,
+			scale: 1.15,
 		},
 	},
 };

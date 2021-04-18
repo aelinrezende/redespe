@@ -58,22 +58,22 @@ const Navbar: React.FC = () => {
 					>
 						<Option
 							whileHover={nav.child.hover}
-							transition={{ duration: 0.3 }}
+							transition={{ duration: 0.2 }}
 							variants={nav.child}
 						>
 							Criar
 						</Option>
 						<Option
 							whileHover={nav.child.hover}
-							transition={{ duration: 0.3 }}
+							transition={{ duration: 0.2 }}
 							variants={nav.child}
 							onClick={() => toggleAccount()}
 						>
-							Trocar de conta | Atual: {account.label}
+							Alternar conta | Atual: {account.label}
 						</Option>
 						<Option
 							whileHover={nav.child.hover}
-							transition={{ duration: 0.3 }}
+							transition={{ duration: 0.2 }}
 							variants={nav.child}
 							onClick={() => addMonthlyValuePopup()}
 						>
