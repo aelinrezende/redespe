@@ -1,7 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
-import { FiMoreHorizontal } from 'react-icons/fi';
 import { FiEdit3 } from 'react-icons/fi';
 import { IoMdRemove } from 'react-icons/io';
 
@@ -157,23 +156,6 @@ export const ExpenseButtonsTop = styled.div`
 export const RemoveIcon = styled(IoMdRemove)``;
 
 export const EditIcon = styled(FiEdit3)``;
-
-/*
-export const MoreIcon = styled(FiMoreHorizontal)`
-  position: absolute;
-  bottom: 0;
-  transform: translateY(50%);
-  right: 0.5rem;
-  background: #1c1f27;
-  color: #fefeff;
-  border-radius: 50%;
-  height: 4rem;
-  width: 4rem;
-  padding: 0.7rem;
-  box-shadow: 0 10px 15px -5px rgb(49 49 49 / 75%);
-  cursor: pointer;
-`;
-*/
 
 export const Bills = styled(motion.ul)`
   list-style: none;
