@@ -16,7 +16,7 @@ import {
 } from './styles';
 
 const Navbar: React.FC = () => {
-	const { getMonthlyValue } = useExpense();
+	const { getMonthlyValue, toggleAccount, account } = useExpense();
 	const { addPopup } = usePopup();
 
 	const [optionsVisible, setOptionsVisible] = useState(false);
@@ -60,6 +60,21 @@ const Navbar: React.FC = () => {
 							whileHover={nav.child.hover}
 							transition={{ duration: 0.3 }}
 							variants={nav.child}
+						>
+							Criar
+						</Option>
+						<Option
+							whileHover={nav.child.hover}
+							transition={{ duration: 0.3 }}
+							variants={nav.child}
+							onClick={() => toggleAccount()}
+						>
+							Trocar de conta | Atual: {account.label}
+						</Option>
+						<Option
+							whileHover={nav.child.hover}
+							transition={{ duration: 0.3 }}
+							variants={nav.child}
 							onClick={() => addMonthlyValuePopup()}
 						>
 							Valor desse mês
@@ -71,13 +86,6 @@ const Navbar: React.FC = () => {
 							onClick={() => addMonthlyAndExtraValuePopup()}
 						>
 							Contas deste mês + comida + gás
-						</Option>
-						<Option
-							whileHover={nav.child.hover}
-							transition={{ duration: 0.3 }}
-							variants={nav.child}
-						>
-							Criar
 						</Option>
 					</OptionsContainer>
 				</NavButton>

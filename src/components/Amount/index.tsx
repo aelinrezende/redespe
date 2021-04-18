@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 import { useExpense } from '../../hooks/expense';
 
-import { ReactComponent as ToggleIcon } from '../../assets/icons/toggle.svg';
 import { ReactComponent as ArrowDownIcon } from '../../assets/icons/arrow.svg';
 
 import './styles.scss';
@@ -12,7 +11,7 @@ interface ExpensesProps {
 }
 
 const Amount: React.FC<ExpensesProps> = ({ route }) => {
-  const { account, toggleAccount, getTotal } = useExpense();
+  const { getTotal } = useExpense();
   const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {
@@ -32,9 +31,7 @@ const Amount: React.FC<ExpensesProps> = ({ route }) => {
           </span>
           <Link to={`${route}`}>
             <ArrowDownIcon
-              className={
-                route !== '/redespe' ? 'total-home-arrow' : 'total-rotate-arrow'
-              }
+              className={route === '/' ? 'total-rotate-arrow' : ''}
             />
           </Link>
         </div>
