@@ -52,6 +52,7 @@ input,
 button,
 textarea {
   font: 500 1.6rem Poppins;
+  letter-spacing: -1px;
   color: var(--color-text-base);
 }
 
@@ -68,7 +69,6 @@ button:focus {
 
 ul {
   list-style: none;
-  padding: 0;
 }
 
 .container {

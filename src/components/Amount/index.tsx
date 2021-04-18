@@ -23,13 +23,9 @@ const Amount: React.FC<ExpensesProps> = ({ route }) => {
     <div className="amount-container">
       <div>
         <p>Total</p>
-        <div className="account-toggle" onClick={() => toggleAccount()}>
-          {account.label}
-          <ToggleIcon />
-        </div>
         <div className="total-details">
           <span>
-            R$
+            <span>R$</span>
             {total?.toLocaleString(undefined, {
               minimumFractionDigits: 2,
             })}

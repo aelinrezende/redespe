@@ -7,13 +7,14 @@
   padding: 1.6rem 2.4rem;
   animation: total-opacity 2s;
   animation-fill-mode: forwards;
-  
+
   & p {
-    align-self: flex-start;
+    font-size: 2rem;
     color: #858586;
   }
-  
-  & .account-toggle, .total-details {
+
+  & .account-toggle,
+  .total-details {
     display: flex;
     align-items: center;
   }
@@ -23,13 +24,24 @@
     cursor: pointer;
 
     & svg {
-      margin-left: .8rem;
+      margin-left: 0.8rem;
       width: 2.2rem;
       height: auto;
     }
   }
 
   & .total-details {
+    span {
+      display: flex;
+      align-items: center;
+      font-size: 3.2rem;
+
+      span {
+        font-size: 1.6rem;
+        margin-right: 0.5rem;
+      }
+    }
+
     & svg {
       width: 2.4rem;
       margin-left: 6rem;
@@ -38,11 +50,10 @@
     }
 
     & svg.total-rotate-arrow {
-      animation: icon-flip .5s;
-      animation-fill-mode: forwards
+      animation: icon-flip 0.5s;
+      animation-fill-mode: forwards;
     }
   }
-  
 }
 
 @keyframes total-opacity {
@@ -50,12 +61,14 @@
     opacity: 0;
   }
   3% {
-    opacity: .2;
+    opacity: 0.2;
   }
   5% {
-    opacity: .5;
+    opacity: 0.5;
   }
-  10%, 25%, 75% {
+  10%,
+  25%,
+  75% {
     opacity: 8;
   }
   100% {

@@ -61,7 +61,7 @@ export const ExpenseContent = styled.div`
     flex: 1;
 
     h2 {
-      margin-bottom: -1rem;
+      margin-bottom: -0.5rem;
     }
 
     span {
@@ -71,7 +71,7 @@ export const ExpenseContent = styled.div`
 
   p {
     font-weight: 600;
-    font-size: 2.2rem;
+    font-size: 2.4rem;
     width: 100%;
     margin-top: 1rem;
   }
