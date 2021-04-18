@@ -49,7 +49,7 @@ const ExpenseContext = createContext<ExpenseContextData>(
 );
 
 const ExpenseProvider: React.FC = ({ children }) => {
-  const [accounts, setAccounts] = useState<AccountsProps[]>(staticData);
+  const accounts: AccountsProps[] = staticData;
   const [accountsIDs] = useState<number[]>(() => {
     const array: number[] = [];
     accounts.forEach((_, i) => {
@@ -97,10 +97,10 @@ const ExpenseProvider: React.FC = ({ children }) => {
       accountsIDs.length === 1
     ) {
       setCurrentAccount(accountsIDs[0]);
-      setAccount(accounts[currentAccount]);
+      setAccount(accounts[accountsIDs[0]]);
     } else {
       setCurrentAccount(accountsIDs[currentAccountIndex + 1]);
-      setAccount(accounts[currentAccount]);
+      setAccount(accounts[currentAccountIndex + 1]);
     }
   }, [accountsIDs, currentAccount, accounts]);
 
