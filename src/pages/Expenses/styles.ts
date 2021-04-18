@@ -85,6 +85,7 @@ export const ExpenseMain = styled.div`
   border-radius: 10px;
   background: #f0f3f9;
   box-shadow: 10px 10px 20px #cbced1, -10px -10px 20px #ffffff;
+  cursor: pointer;
 
   transition: border 0.5s ease-in-out;
 
@@ -100,6 +101,16 @@ export const ExpenseButtonsTop = styled.div`
   right: 0.5rem;
 
   display: flex;
+
+  opacity: 0;
+  visibility: hidden;
+
+  transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+
+  ${ExpenseMain}:hover & {
+    opacity: 1;
+    visibility: visible;
+  }
 
   a {
     margin-right: 0.5rem;
@@ -147,6 +158,7 @@ export const RemoveIcon = styled(IoMdRemove)``;
 
 export const EditIcon = styled(FiEdit3)``;
 
+/*
 export const MoreIcon = styled(FiMoreHorizontal)`
   position: absolute;
   bottom: 0;
@@ -161,6 +173,7 @@ export const MoreIcon = styled(FiMoreHorizontal)`
   box-shadow: 0 10px 15px -5px rgb(49 49 49 / 75%);
   cursor: pointer;
 `;
+*/
 
 export const Bills = styled(motion.ul)`
   list-style: none;

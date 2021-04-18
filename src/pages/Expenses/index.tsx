@@ -20,7 +20,6 @@ import {
   ExpenseButtonsTop,
   RemoveIcon,
   EditIcon,
-  MoreIcon,
   Bills,
 } from './styles';
 
@@ -77,7 +76,9 @@ const Expenses: React.FC = () => {
           <Fragment key={label + account.id}>
             {bills.length > 0 && (
               <Expense key={label + provider + account.id}>
-                <ExpenseMain>
+                <ExpenseMain
+                  onClick={() => toggleBillsVisibility(provider + account.id)}
+                >
                   <ExpenseContent>
                     <div />
 
@@ -99,10 +100,6 @@ const Expenses: React.FC = () => {
                       />
                     </button>
                   </ExpenseButtonsTop>
-
-                  <MoreIcon
-                    onClick={() => toggleBillsVisibility(provider + account.id)}
-                  />
                 </ExpenseMain>
                 <AnimatePresence>
                   {billsVisibility.includes(provider + account.id) && (
