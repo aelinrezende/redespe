@@ -13,30 +13,16 @@
     color: #858586;
   }
 
-  & .account-toggle,
-  .total-details {
+  & .total-details {
     display: flex;
     align-items: center;
-  }
+    justify-content: space-between;
 
-  & .account-toggle {
-    font-size: 1.8rem;
-    cursor: pointer;
-
-    & svg {
-      margin-left: 0.8rem;
-      width: 2.2rem;
-      height: auto;
-    }
-  }
-
-  & .total-details {
     span {
       font-size: 3.2rem;
 
       display: flex;
       align-items: center;
-      justify-content: space-between;
 
       span {
         font-size: 1.6rem;
@@ -44,16 +30,21 @@
       }
     }
 
-    & svg {
-      width: 2.4rem;
-      margin-left: 6rem;
-      stroke: #000;
-      stroke-width: 2;
-    }
+    a {
+      width: 5rem;
 
-    & svg.total-rotate-arrow {
-      animation: icon-flip 0.5s;
-      animation-fill-mode: forwards;
+      svg {
+        display: block;
+        width: 2.4rem;
+        stroke: #000;
+        stroke-width: 2;
+        margin-left: auto;
+      }
+
+      svg.total-rotate-arrow {
+        animation: icon-flip 0.5s;
+        animation-fill-mode: forwards;
+      }
     }
   }
 }
