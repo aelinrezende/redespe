@@ -11,7 +11,7 @@ interface ExpensesProps {
 }
 
 const Amount: React.FC<ExpensesProps> = ({ route }) => {
-  const { getTotal, account } = useExpense();
+  const { getTotal, account, currentAccount } = useExpense();
   const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {
@@ -20,21 +20,19 @@ const Amount: React.FC<ExpensesProps> = ({ route }) => {
 
   return (
     <div className="amount-container">
-      <div>
-        <p>Total</p>
-        <div className="total-details">
-          <span>
-            <span>R$</span>
-            {total?.toLocaleString(undefined, {
-              minimumFractionDigits: 2,
-            })}
-          </span>
-          <Link to={`${route}`}>
-            <ArrowDownIcon
-              className={route === '/' ? 'total-rotate-arrow' : ''}
-            />
-          </Link>
-        </div>
+      <p>Total C/{currentAccount + 1}</p>
+      <div className="total-details">
+        <span>
+          <span>R$</span>
+          {total?.toLocaleString(undefined, {
+            minimumFractionDigits: 2,
+          })}
+        </span>
+        <Link to={`${route}`}>
+          <ArrowDownIcon
+            className={route === '/' ? 'total-rotate-arrow' : ''}
+          />
+        </Link>
       </div>
     </div>
   );

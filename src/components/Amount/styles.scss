@@ -1,10 +1,10 @@
 .amount-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   width: 100%;
   font-size: 2.8rem;
   padding: 1.6rem 2.4rem;
+  margin: 0 auto;
+  max-width: 30rem;
+
   animation: total-opacity 2s;
   animation-fill-mode: forwards;
 
@@ -32,9 +32,11 @@
 
   & .total-details {
     span {
+      font-size: 3.2rem;
+
       display: flex;
       align-items: center;
-      font-size: 3.2rem;
+      justify-content: space-between;
 
       span {
         font-size: 1.6rem;
