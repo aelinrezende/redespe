@@ -11,7 +11,7 @@ interface ExpensesProps {
 }
 
 const Amount: React.FC<ExpensesProps> = ({ route }) => {
-  const { getTotal } = useExpense();
+  const { getTotal, account } = useExpense();
   const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {

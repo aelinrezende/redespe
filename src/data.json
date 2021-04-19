@@ -87,16 +87,16 @@
           },
           {
             "id": "646n4i9769na4",
-            "expire": "01/02/2020",
-            "reference": "Jan, 2020",
+            "expire": "04/02/2021",
+            "reference": "Jan, 2021",
             "value": 123.92,
             "installment": { "status": false }
           },
           {
             "id": "b547m54w4yasz",
-            "expire": "01/03/2020",
-            "reference": "Fev, 2020",
-            "value": 181.83,
+            "expire": "05/04/2021",
+            "reference": "Mar, 2021",
+            "value": 79.17,
             "installment": { "status": false }
           }
         ]
@@ -150,9 +150,9 @@
           },
           {
             "id": "5bwe35mw35abwe",
-            "expire": "25/03/2021",
-            "reference": "Mar, 2021",
-            "value": 112.6,
+            "expire": "25/04/2021",
+            "reference": "Apr, 2021",
+            "value": 111.23,
             "installment": { "status": false }
           }
         ]
@@ -164,9 +164,9 @@
         "bills": [
           {
             "id": "5b3w564mw6atbwr",
-            "expire": "15/03/2020",
+            "expire": "15/04/2020",
             "reference": "Mar, 2020",
-            "value": 232.2,
+            "value": 201.36,
             "installment": { "status": false }
           }
         ]
@@ -261,9 +261,9 @@
         "bills": [
           {
             "id": "b53w5bu5r",
-            "expire": "05/04/2021",
-            "reference": "Mar, 2021",
-            "value": 99.59,
+            "expire": "05/05/2021",
+            "reference": "Apr, 2021",
+            "value": 258.14,
             "installment": { "status": false }
           }
         ]
@@ -275,22 +275,29 @@
         "bills": [
           {
             "id": "b53w5bu5r",
+            "expire": "01/05/2021",
+            "reference": "Apr, 2021",
+            "value": 54.41,
+            "installment": { "status": false }
+          },
+          {
+            "id": "b53w5bu5r",
             "expire": "01/04/2021",
-            "reference": "Mar, 2020",
+            "reference": "Mar, 2021",
             "value": 54.41,
             "installment": { "status": false }
           },
           {
             "id": "v43wb4wtn4",
             "expire": "01/03/2021",
-            "reference": "Feb, 2020",
+            "reference": "Feb, 2021",
             "value": 54.41,
             "installment": { "status": false }
           },
           {
             "id": "awv4wa4vwa",
             "expire": "01/02/2021",
-            "reference": "Jan, 2020",
+            "reference": "Jan, 2021",
             "value": 54.41,
             "installment": { "status": false }
           },
