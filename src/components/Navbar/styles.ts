@@ -1,25 +1,38 @@
 import { Link } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
 import { motion } from 'framer-motion';
 
 import { CgOptions } from 'react-icons/cg';
 
+const NavButtonAppear = keyframes`
+	0% {
+		opacity: 0;
+		transform: translateY(-30px);
+	}
+	50% {
+		opacity: 0.75;
+		transform: translateY(10px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0);
+	}
+`;
+
 export const NavContainer = styled.nav`
 	position: fixed;
-	bottom: 0;
-	left: 0;
+	right: 50%;
+	transform: translateX(50%);
+	bottom: 2rem;
 
 	height: 5rem;
-	width: 100%;
-
-	display: flex;
-	justify-content: center;
+	width: 5rem;
 `;
 
 export const Nav = styled.div`
 	position: absolute;
-	transform: translateY(25%);
-	bottom: 75%;
+
+	animation: ${NavButtonAppear} 0.3s forwards;
 `;
 
 export const NavButton = styled(motion.button)`
