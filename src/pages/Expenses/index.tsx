@@ -7,7 +7,7 @@ import { sortArrayOfObjByDate } from '../../utils/date';
 import Amount from '../../components/Amount';
 import Navbar from '../../components/Navbar/';
 
-import Bill from './children/Bill/';
+import Bill from '../../components/Bill/';
 
 import { useExpense, BillsProps } from '../../hooks/expense';
 
@@ -42,6 +42,7 @@ const Expenses: React.FC = () => {
 
   const getBillsTotal = useCallback((bills: Array<BillsProps>) => {
     let total = 0;
+
     for (let i = 0; i < bills.length; i++) {
       total += bills[i].value;
     }
@@ -91,7 +92,7 @@ const Expenses: React.FC = () => {
                   </ExpenseContent>
 
                   <ExpenseButtonsTop>
-                    <a href="google.com">
+                    <a href="/nowhere">
                       <EditIcon />
                     </a>
                     <button>
@@ -112,10 +113,13 @@ const Expenses: React.FC = () => {
                     >
                       {sortDate(bills).map((billProps: BillsProps, billID) => (
                         <Bill
-                          key={billProps.id}
                           {...billProps}
+                          key={billProps.id}
                           removeBill={handleRemoveBill}
                           expenseIndex={expenseIndex}
+                          variants={billsVariants.child}
+                          transition={{ duration: 0.3 }}
+                          whileHover={billsVariants.child.hover}
                         />
                       ))}
                     </Bills>

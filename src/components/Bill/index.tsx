@@ -1,10 +1,10 @@
 import React, { memo, useCallback } from 'react';
+import { MotionProps } from 'framer-motion';
 
 import { RiHandCoinFill as PayIcon } from 'react-icons/ri';
 
-import { formatDate } from '../../../../utils/date';
-import { BillsProps } from '../../../../hooks/expense';
-import { bills as billsVariants } from '../../motion.variants';
+import { formatDate } from '../../utils/date';
+import { BillsProps } from '../../hooks/expense';
 
 import { Container } from './styles';
 
@@ -13,7 +13,7 @@ interface BillProps extends BillsProps {
 	expenseIndex: number;
 }
 
-const Bill: React.FC<BillProps> = ({
+const Bill: React.FC<BillProps & MotionProps> = ({
 	installment,
 	value,
 	reference,
@@ -21,6 +21,7 @@ const Bill: React.FC<BillProps> = ({
 	id,
 	removeBill,
 	expenseIndex,
+	...rest
 }) => {
 	const handleRemoveBill = useCallback(
 		(expenseIndex: number, billID: string, value: number) => {
@@ -36,12 +37,7 @@ const Bill: React.FC<BillProps> = ({
 	const setDate = useCallback((date: string): string => formatDate(date), []);
 
 	return (
-		<Container
-			variants={billsVariants.child}
-			transition={{ duration: 0.3 }}
-			whileHover={billsVariants.child.hover}
-			key={reference + value + expire}
-		>
+		<Container {...rest}>
 			<div>
 				<span>
 					{setDate(reference)}{' '}
