@@ -1,5 +1,4 @@
 import React, { memo, useCallback } from 'react';
-import { MotionProps } from 'framer-motion';
 
 import { RiHandCoinFill as PayIcon } from 'react-icons/ri';
 
@@ -9,26 +8,22 @@ import { BillsProps } from '../../hooks/expense';
 import { Container } from './styles';
 
 interface BillProps extends BillsProps {
-	removeBill(expenseIndex: number, billID: string): void;
-	expenseIndex: number;
+	expenseID: string;
+	removeBill(): void;
 }
 
-const Bill: React.FC<BillProps & MotionProps> = ({
-	installment,
-	value,
-	reference,
+const Bill: React.FC<BillProps> = ({
+	expenseID,
+	id: billID,
 	expire,
-	id,
+	installment,
+	reference,
+	value,
 	removeBill,
-	expenseIndex,
-	...rest
 }) => {
-	const handleRemoveBill = useCallback(
-		(expenseIndex: number, billID: string, value: number) => {
-			removeBill(expenseIndex, id);
-		},
-		[removeBill, id],
-	);
+	const handleRemoveBill = useCallback(() => {
+		removeBill();
+	}, [removeBill]);
 
 	const formatNumberToCurrency = useCallback(number => {
 		return number.toLocaleString(undefined, { minimumFractionDigits: 2 });
@@ -37,7 +32,7 @@ const Bill: React.FC<BillProps & MotionProps> = ({
 	const setDate = useCallback((date: string): string => formatDate(date), []);
 
 	return (
-		<Container {...rest}>
+		<Container>
 			<div>
 				<span>
 					{setDate(reference)}{' '}
@@ -45,7 +40,7 @@ const Bill: React.FC<BillProps & MotionProps> = ({
 				</span>
 				<p>R${formatNumberToCurrency(value)}</p>
 			</div>
-			<button onClick={() => handleRemoveBill(expenseIndex, id, value)}>
+			<button onClick={() => handleRemoveBill()}>
 				<PayIcon />
 			</button>
 		</Container>

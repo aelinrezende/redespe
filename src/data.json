@@ -4,6 +4,7 @@
     "label": "Casa 01",
     "data": [
       {
+        "id": "cwertb5tw4b",
         "provider": "Enel",
         "label": "Luz",
         "logo": "enel_logo",
@@ -102,6 +103,7 @@
         ]
       },
       {
+        "id": "rtrenysgh y5e",
         "provider": "Sabesp",
         "label": "Água",
         "logo": "sabesp_logo",
@@ -158,6 +160,7 @@
         ]
       },
       {
+        "id": "tnretartbrts",
         "provider": "Vivo",
         "label": "Internet + Fixo",
         "logo": "vivo_logo",
@@ -172,6 +175,7 @@
         ]
       },
       {
+        "id": "vrwarbetny5",
         "provider": "Prefeitura",
         "label": "Lixo",
         "logo": "santana_logo",
@@ -255,6 +259,7 @@
     "label": "Casa 02",
     "data": [
       {
+        "id": "retre6y6nre6ern6s",
         "provider": "Enel",
         "label": "Luz",
         "logo": "enel_logo",
@@ -269,6 +274,7 @@
         ]
       },
       {
+        "id": "dry5nr7ysrby4se56bs",
         "provider": "Sabesp",
         "label": "Água",
         "logo": "sabesp_logo",
@@ -402,12 +408,14 @@
         ]
       },
       {
+        "id": "b4w5nebrtrtbr",
         "provider": "Vivo",
         "label": "Internet + Fixo",
         "logo": "vivo_logo",
         "bills": []
       },
       {
+        "id": "dfdste4r54w5w3543w",
         "provider": "Casas Bahia",
         "label": "Celular",
         "logo": "casas_bahia_logo",
