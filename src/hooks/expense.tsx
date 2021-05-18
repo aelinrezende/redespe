@@ -81,11 +81,11 @@ const ExpenseProvider: React.FC = ({ children }) => {
       const obj: AccountsProps = { ...oldObj };
 
       const expenseIndex = obj.data.findIndex(
-        expense => (expense.id = expenseID),
+        expense => expense.id === expenseID,
       );
 
       const billIndex = obj.data[expenseIndex].bills.findIndex(
-        bill => (bill.id = billID),
+        bill => bill.id === billID,
       );
 
       obj.data[expenseIndex].bills.splice(billIndex, 1);
