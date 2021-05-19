@@ -1,23 +1,14 @@
-import React, { createContext, useCallback, useContext, useState } from 'react';
+import React, { createContext, useCallback, useContext } from 'react';
 
-import staticData from '../data.json';
+import { useAccount, AccountsProps } from './account';
 
 import { sortArrayOfObjByDate } from '../utils/date';
 
 interface ExpenseContextData {
-  account: AccountsProps;
-  currentAccount: number;
   removeExpense(expenseIndex: number): void;
   removeBill(expenseID: string, billID: string): void;
-  toggleAccount(): void;
   getTotal(): number;
   getMonthlyValue(): number;
-}
-
-export interface AccountsProps {
-  id: string;
-  label: string;
-  data: Array<ExpensesProps>;
 }
 
 export interface ExpensesProps {
@@ -39,31 +30,12 @@ export interface BillsProps {
   };
 }
 
-interface TotalsProps {
-  currentAccount: number;
-  monthly: number;
-  full: number;
-}
-
 const ExpenseContext = createContext<ExpenseContextData>(
   {} as ExpenseContextData,
 );
 
 const ExpenseProvider: React.FC = ({ children }) => {
-  const accounts: AccountsProps[] = staticData;
-  const [accountsIDs] = useState<number[]>(() => {
-    const array: number[] = [];
-    accounts.forEach((_, i) => {
-      array.push(i);
-    });
-
-    return array;
-  });
-
-  const [currentAccount, setCurrentAccount] = useState<number>(0);
-  const [account, setAccount] = useState<AccountsProps>(
-    accounts[currentAccount],
-  );
+  const { account, setAccount } = useAccount();
 
   const removeExpense = useCallback(
     (expenseIndex: number) => {
@@ -73,41 +45,29 @@ const ExpenseProvider: React.FC = ({ children }) => {
 
       setAccount({ ...array });
     },
-    [account],
+    [account, setAccount],
   );
 
-  const removeBill = useCallback((expenseID: string, billID: string) => {
-    setAccount(oldObj => {
-      const obj: AccountsProps = { ...oldObj };
+  const removeBill = useCallback(
+    (expenseID: string, billID: string) => {
+      setAccount(previousAccountState => {
+        let updatedAccount: AccountsProps = { ...previousAccountState };
 
-      const expenseIndex = obj.data.findIndex(
-        expense => expense.id === expenseID,
-      );
+        let expenseIndex = updatedAccount.data.findIndex(
+          expense => expense.id === expenseID,
+        );
 
-      const billIndex = obj.data[expenseIndex].bills.findIndex(
-        bill => bill.id === billID,
-      );
+        let billIndex = updatedAccount.data[expenseIndex].bills.findIndex(
+          bill => bill.id === billID,
+        );
 
-      obj.data[expenseIndex].bills.splice(billIndex, 1);
+        updatedAccount.data[expenseIndex].bills.splice(billIndex, 1);
 
-      return obj;
-    });
-  }, []);
-
-  const toggleAccount = useCallback(() => {
-    const currentAccountIndex = accountsIDs.indexOf(currentAccount);
-
-    if (
-      currentAccountIndex + 1 === accountsIDs.length ||
-      accountsIDs.length === 1
-    ) {
-      setCurrentAccount(accountsIDs[0]);
-      setAccount(accounts[accountsIDs[0]]);
-    } else {
-      setCurrentAccount(accountsIDs[currentAccountIndex + 1]);
-      setAccount(accounts[currentAccountIndex + 1]);
-    }
-  }, [accountsIDs, currentAccount, accounts]);
+        return updatedAccount;
+      });
+    },
+    [setAccount],
+  );
 
   const getTotal = useCallback(() => {
     let value: number = 0;
@@ -136,11 +96,8 @@ const ExpenseProvider: React.FC = ({ children }) => {
   return (
     <ExpenseContext.Provider
       value={{
-        account,
         removeExpense,
         removeBill,
-        toggleAccount,
-        currentAccount,
         getTotal,
         getMonthlyValue,
       }}

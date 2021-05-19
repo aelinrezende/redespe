@@ -2,6 +2,7 @@ import React, { useState, memo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
 import { useExpense } from '../../hooks/expense';
+import { useAccount } from '../../hooks/account';
 
 import { ReactComponent as ArrowDownIcon } from '../../assets/icons/arrow.svg';
 
@@ -11,7 +12,8 @@ interface ExpensesProps {
 }
 
 const Amount: React.FC<ExpensesProps> = ({ route }) => {
-  const { getTotal, currentAccount } = useExpense();
+  const { getTotal } = useExpense();
+  // const { currentAccount } = useExpense();
   const [total, setTotal] = useState<number>(0);
 
   useEffect(() => {
@@ -20,7 +22,7 @@ const Amount: React.FC<ExpensesProps> = ({ route }) => {
 
   return (
     <div className="amount-container">
-      <p>Total C/{currentAccount + 1}</p>
+      <p>Total C/{0 + 1}</p>
       <div className="total-details">
         <span>
           <span>R$</span>

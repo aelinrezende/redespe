@@ -2,6 +2,7 @@ import React, { useState, useCallback, useEffect, memo } from 'react';
 
 import { useExpense } from '../../hooks/expense';
 import { usePopup } from '../../hooks/popup';
+import { useAccount } from '../../hooks/account';
 
 import { nav, button } from './motion.variants';
 
@@ -16,8 +17,9 @@ import {
 } from './styles';
 
 const Navbar: React.FC = () => {
-	const { getMonthlyValue, toggleAccount, account } = useExpense();
+	const { getMonthlyValue } = useExpense();
 	const { addPopup } = usePopup();
+	const { account, toggleAccount } = useAccount();
 
 	const [optionsVisible, setOptionsVisible] = useState(false);
 	const [monthlyValue, setMonthlyValue] = useState(0);

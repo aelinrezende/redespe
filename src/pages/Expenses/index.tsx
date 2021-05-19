@@ -1,4 +1,4 @@
-import React, { useState, useCallback, memo, Fragment } from 'react';
+import React, { useState, useCallback, memo, Fragment, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 
 import { bills as billsVariants } from './motion.variants';
@@ -10,6 +10,7 @@ import Navbar from '../../components/Navbar/';
 import BillWrapper from '../../components/BillWrapper/';
 
 import { useExpense, BillsProps } from '../../hooks/expense';
+import { useAccount } from '../../hooks/account';
 
 import {
   Container,
@@ -24,7 +25,9 @@ import {
 } from './styles';
 
 const Expenses: React.FC = () => {
-  const { account, removeExpense, removeBill } = useExpense();
+  const { removeExpense, removeBill } = useExpense();
+  const { account } = useAccount();
+
   const [billsVisibility, setBillsVisibility] = useState<Array<string>>([]);
 
   const toggleBillsVisibility = useCallback(
@@ -68,6 +71,10 @@ const Expenses: React.FC = () => {
     (array: any[]) => sortArrayOfObjByDate(array, 'reference'),
     [],
   );
+
+  useEffect(() => {
+    console.log('MUDOU');
+  }, [account]);
 
   return (
     <Container>
@@ -134,4 +141,4 @@ const Expenses: React.FC = () => {
   );
 };
 
-export default memo(Expenses);
+export default Expenses;
