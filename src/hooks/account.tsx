@@ -26,16 +26,13 @@ export interface AccountsProps {
 const AccountContext = createContext<IAccount>({} as IAccount);
 
 const AccountProvider: React.FC = ({ children }) => {
-  const accounts: AccountsProps[] = staticData;
+  const [accounts, setAccounts] = useState<AccountsProps[]>(staticData);
   const [account, setAccount] = useState<AccountsProps>(accounts[0]);
 
   const toggleAccount = useCallback(() => {
-    setAccount([...accounts].reverse()[0]);
+    setAccounts([...accounts].reverse());
+    setAccount(accounts[0]);
   }, [accounts]);
-
-  useEffect(() => {
-    console.log('MUDOU');
-  }, [account]);
 
   return (
     <AccountContext.Provider

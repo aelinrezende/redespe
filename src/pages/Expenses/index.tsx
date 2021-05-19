@@ -72,10 +72,6 @@ const Expenses: React.FC = () => {
     [],
   );
 
-  useEffect(() => {
-    console.log('MUDOU');
-  }, [account]);
-
   return (
     <Container>
       <Amount route="/" />
